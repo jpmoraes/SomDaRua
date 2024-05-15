@@ -1,0 +1,71 @@
+body {
+    width:100vw;
+    height: 100vh;
+}
+
+.grid{
+    display: grid;
+    grid-template: 
+    "carrossel" 700px
+    "agenda" 600px
+    "saibaMais" 800px
+    "sobreNos" 450px
+    / 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 60px;
+}
+
+
+
+.Carrossel{
+    grid-area: carrossel;
+}
+
+.agenda{
+
+    grid-area: agenda;
+}
+
+.saibaMais{
+    grid-area: saibaMais;
+}
+
+.sobreNos{
+    grid-area: sobreNos;
+}
+
+.footer{
+    grid-area: footer;
+}
+/*carrossel*/
+
+
+
+.carousel-item img {
+    border-radius: 30px !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("../assets/img/prev.png") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("../assets/img/next.png") !important;
+}
+
+.carousel-control-prev {
+    display: flex !important;
+    align-items: end !important;
+    margin-left: 580px;
+    margin-bottom: 40px;
+    justify-content: end !important;
+}
+
+.carousel-control-next {
+    display: flex !important;
+    align-items: flex-end !important;
+    margin-right: 580px;
+    margin-bottom: 40px;
+    justify-content: start !important;
+}
