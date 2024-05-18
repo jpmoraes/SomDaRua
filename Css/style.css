@@ -8,6 +8,7 @@ body {
     grid-template: 
     "carrossel" 700px
     "agenda" 600px
+    "generos" 900px
     "saibaMais" 800px
     "sobreNos" 450px
     / 1fr;
@@ -27,6 +28,9 @@ body {
     grid-area: agenda;
 }
 
+.genero{
+    grid-area: generos;
+}
 .saibaMais{
     grid-area: saibaMais;
 }
@@ -35,9 +39,7 @@ body {
     grid-area: sobreNos;
 }
 
-.footer{
-    grid-area: footer;
-}
+
 /*carrossel*/
 
 
