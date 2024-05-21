@@ -1,18 +1,16 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
 
-
 .titulo-genero{
   text-align: center;
   justify-content: center;
   align-items: center;
   padding-bottom: 10px;
   color: black;
-  
 }
 
 /*=============== CARD ===============*/
-.container {
+.genero .container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,14 +36,12 @@
 .card__image {
   position: relative;
   background-color: #F2A007;
-  /* padding-top: 1.5rem; */
   margin-bottom: -.75rem;
 }
 
 .card__data {
   background-color: #0776d6;
   padding: 1.5rem 2rem;
-  /* border-radius: 1rem; */
   text-align: center;
   position: relative;
   z-index: 10;

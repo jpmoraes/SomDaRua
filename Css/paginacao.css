@@ -157,8 +157,8 @@ h1 {
 #iabout, #iabout img {
     position: relative;
     width: 73vw;
-    height: 80vh;
-    object-fit: cover;
+    height: 400px;
+    object-fit: fill;
 }
 
 .carousel-inner {
@@ -170,7 +170,7 @@ h1 {
     transition: transform 1s ease-in-out;
 }
 
-#ilabel {
+/* #ilabel {
     z-index: 2;
     position: absolute;
     height: 100%;
@@ -184,4 +184,4 @@ h1 {
     color: white;
     text-decoration: none;
     filter: drop-shadow(2px 2px black);
-}
+} */
