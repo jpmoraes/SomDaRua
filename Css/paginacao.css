@@ -142,6 +142,31 @@ h1 {
     transform: perspective(100px) rotateY(0);
 }
 
+#isaibaMais, #isaibaMais img {
+    width: 73vw;
+    height: 400px;
+    object-fit: cover;
+}
+
+.saibaMaisInner {
+    border-radius: 50px !important;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.saibaMaisItem {
+    transition: .5s ease-in-out;
+}
+
+#ilabel {
+    position: absolute;
+    height: 400px;
+    line-height: 400px;
+    font-size: 9vw;
+    color: white;
+    text-decoration: none;
+    filter: drop-shadow(2px 2px black);
+}
+
 @media only screen and (max-width: 480px){
     .pagination{
         font-size: 0;
@@ -153,35 +178,3 @@ h1 {
         margin: 0 0 15px;
     }
 }
-
-#iabout, #iabout img {
-    position: relative;
-    width: 73vw;
-    height: 400px;
-    object-fit: fill;
-}
-
-.carousel-inner {
-    border-radius: 50px !important;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-}
-
-.carousel-item {
-    transition: transform 1s ease-in-out;
-}
-
-/* #ilabel {
-    z-index: 2;
-    position: absolute;
-    height: 100%;
-    line-height: 80vh;
-    justify-content: center;
-    align-items: center; 
-    font-size: 9vw;
-}
-
-#ilabel a {
-    color: white;
-    text-decoration: none;
-    filter: drop-shadow(2px 2px black);
-} */
