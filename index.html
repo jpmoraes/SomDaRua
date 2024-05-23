@@ -10,11 +10,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/paginacao.css">
+  <link rel="stylesheet" href="css/index.css"/>
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/slidegeneros.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 
@@ -136,7 +134,7 @@
         <ul class="pagination">
           <li class="page-item">
             <a href="#" class="page-link" aria-label="Previous">
-              <span aria-hidden="true">«</span>
+              <span aria-hidden="true">»</span>
             </a>
           </li>
           <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -146,7 +144,7 @@
           <li class="page-item"><a class="page-link" href="#">5</a></li>
           <li class="page-item">
             <a href="#" class="page-link" aria-label="Next">
-              <span aria-hidden="true">»</span>
+              <span aria-hidden="true">«</span>
             </a>
           </li>
         </ul>
@@ -155,137 +153,77 @@
 
     <section class="container genero">
       <div class="card__container swiper">
-        <h1 class="titulo-genero">Gêneros</h1>
+        <h1>Gêneros</h1>
         <div class="card__content">
           <div class="swiper-wrapper">
             <article class="card__article swiper-slide">
-              <div class="card__image">
-                <img src="assets/img/musica-classica.png" alt="image" class="card__img">
-                <div class="card__shadow"></div>
-              </div>
-
-              <div class="card__data">
-                <h3 class="card__name">Música Classica</h3>
-                <p class="card__description">
-                  Mergulhe em melodias que transcenderam séculos, apresentadas por músicos talentosos em locais
-                  deslumbrantes.
-                </p>
-
-                <a href="#" class="card__button">Ver agenda</a>
-              </div>
+              <a href="#" class="card__image">
+                <img src="assets/img/generos/musica-classica.png" alt="image">
+                <div class="generos-label-background">
+                  <h3>Classica</h3>
+                </div>
+              </a>
             </article>
 
             <article class="card__article swiper-slide">
-              <div class="card__image">
-                <img src="assets/img/musica-eletronica.png" alt="image" class="card__img">
-                <div class="card__shadow"></div>
-              </div>
-
-              <div class="card__data">
-                <h3 class="card__name">Música Eletrônica</h3>
-                <p class="card__description">
-                  Uma experiência futurista que eleva mente e corpo com batidas pulsantes e sons sintetizados.
-                </p>
-
-                <a href="#" class="card__button">Ver agenda</a>
-              </div>
+              <a href="#" class="card__image">
+                <img src="assets/img/generos/musica-eletronica.png" alt="image">
+                <div class="generos-label-background">
+                  <h3>Eletrônica</h3>
+                </div>
+              </a>
             </article>
 
             <article class="card__article swiper-slide">
-              <div class="card__image">
-                <img src="assets/img/musica-forro.png" alt="image" class="card__img">
-                <div class="card__shadow"></div>
-              </div>
-
-              <div class="card__data">
-                <h3 class="card__name">Forró</h3>
-                <p class="card__description">
-                  Explore o calor do Nordeste brasileiro em nossos eventos de forró. Dança, cultura e muita animação no
-                  compasso do ritmo cativante.
-                </p>
-
-                <a href="#" class="card__button">Ver agenda</a>
-              </div>
+              <a href="#" class="card__image">
+                <img src="assets/img/generos/musica-forro.png" alt="image">
+                <div class="generos-label-background">
+                  <h3>Forró</h3>
+                </div>
+              </a>
             </article>
 
             <article class="card__article swiper-slide">
-              <div class="card__image">
-                <img src="assets/img/musica-jazz.png" alt="image" class="card__img">
-                <div class="card__shadow"></div>
-              </div>
-
-              <div class="card__data">
-                <h3 class="card__name">Jazz</h3>
-                <p class="card__description">
-                  Uma experiência musical única, com liberdade criativa e conexões emocionais.
-                </p>
-
-                <a href="#" class="card__button">Ver agenda</a>
-              </div>
+              <a href="#" class="card__image">
+                <img src="assets/img/generos/musica-jazz.png" alt="image">
+                <div class="generos-label-background">
+                  <h3>Jazz</h3>
+                </div>
+              </a>
             </article>
 
             <article class="card__article swiper-slide">
-              <div class="card__image">
-                <img src="assets/img/musica-rap.png" alt="image" class="card__img">
-                <div class="card__shadow"></div>
-              </div>
-
-              <div class="card__data">
-                <h3 class="card__name">Rap</h3>
-                <p class="card__description">
-                  Entre na batida e na poesia das ruas. Letras afiadas e batidas envolventes se unem para desafiar o
-                  status quo e celebrar a autenticidade da cultura urbana.
-                </p>
-
-                <a href="#" class="card__button">Ver agenda</a>
-              </div>
+              <a href="#" class="card__image">
+                <img src="assets/img/generos/musica-rap.png" alt="image">
+                <div class="generos-label-background">
+                  <h3>Rap</h3>
+                </div>
+              </a>
             </article>
 
             <article class="card__article swiper-slide">
-              <div class="card__image">
-                <img src="assets/img/musica-rock.png" alt="image" class="card__img">
-                <div class="card__shadow"></div>
-              </div>
-
-              <div class="card__data">
-                <h3 class="card__name">Rock 'n Roll</h3>
-                <p class="card__description">
-                  Entre na energia do rock em nossos eventos. De riffs intensos a letras apaixonadas, experimente a
-                  emoção crua deste gênero icônico.
-                </p>
-
-                <a href="#" class="card__button">Ver agenda</a>
-              </div>
+              <a href="#" class="card__image">
+                <img src="assets/img/generos/musica-rock.png" alt="image">
+                <div class="generos-label-background">
+                  <h3>Rock</h3>
+                </div>
+              </a>
             </article>
 
             <article class="card__article swiper-slide">
-              <div class="card__image">
-                <img src="assets/img/musica-samba.png" alt="image" class="card__img">
-                <div class="card__shadow"></div>
-              </div>
-
-              <div class="card__data">
-                <h3 class="card__name">Samba</h3>
-                <p class="card__description">
-                  Música que celebra a alma do Brasil, com ritmo envolvente e energia contagiante.
-                </p>
-
-                <a href="#" class="card__button">Ver agenda</a>
-              </div>
+              <a href="#" class="card__image">
+                <img src="assets/img/generos/musica-samba.png" alt="image">
+                <div class="generos-label-background">
+                  <h3>Samba</h3>
+                </div>
+              </a>
             </article>
-
           </div>
+          
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
 
-        <div class="swiper-button-next">
-          <i class="ri-arrow-right-s-line"></i>
-        </div>
-
-        <div class="swiper-button-prev">
-          <i class="ri-arrow-left-s-line"></i>
-        </div>
-
-        <div class="swiper-pagination"></div>
       </div>
     </section>
 
@@ -300,6 +238,9 @@
         </div>
         <div class="carousel-item saibaMaisItem">
           <img src="assets/img/saibaMais/fitabonfim.jpg" alt="Fitas do Senhor do Bonfim" class="d-block w-100">
+        </div>
+        <div class="carousel-item saibaMaisItem">
+          <img src="assets/img/saibaMais/pelourinho.jpg" alt="Pelourinho" class="d-block w-100">
         </div>
       </div>
     </div>
@@ -396,6 +337,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/index-swiper.js"></script>
 </body>
 </html>
