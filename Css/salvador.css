@@ -53,7 +53,7 @@
 .img-pelourinho{
     height: 900px;
     width: 100%;
-    background-image: url(..//assets/img/saibaMais/pelourinho.png);
+    background-image: url(../assets/img/saibaMais/pelourinho.png);
     background-size: cover;
 }
 
@@ -115,7 +115,7 @@
 .img-barra{
     height: 900px;
     width: 100%;
-    background-image: url(../assets/img/saibaMais/faroldabarra.jpg);
+    background-image: url(../assets/img/saibaMais/barra.png);
     background-size: cover;
 }
 

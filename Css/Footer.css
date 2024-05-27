@@ -2,7 +2,6 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    /* margin-top: 13vw; */
     color: #f5f5f5
 }
 
@@ -11,10 +10,6 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
-}
-
-.footer_contacts h1 {
-    margin-bottom: 0.75rem;
 }
 
 .footer_social_media{
@@ -76,8 +71,7 @@ footer {
 }
 
 .input-group{
-    display: flex;
-    align-items: center;
+    position: relative;
     background-color: #0c0c0c;
     border-radius: 4px;
 }
@@ -86,16 +80,19 @@ footer {
     all: unset;
     padding: 0.75rem;
     width: 100%;
+    padding-left: 65px;
 }
 
 .input-group button{
+    position: absolute;
+    left: 0;
     background-color: #ff9807;
     border: none;
     color: #f5f5f5;
     padding: 0px 1.25rem;
     font-size: 1.125rem;
     height: 100%;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 4px 0px 0px 4px !important;
     cursor: pointer;
     transition: all 0.4s;
 }
@@ -103,8 +100,6 @@ footer {
 .input-group button:hover{
     opacity: 0.8;
 }
-
-
 
 .footer_copyright{
     display: flex;
