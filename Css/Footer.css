@@ -6,7 +6,7 @@ footer {
 }
 
 .footer_container{
-    background-color: rgba(5, 91, 166, 1);
+    background: linear-gradient(#065295,#085ea8,#043f72);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
@@ -104,7 +104,7 @@ footer {
 .footer_copyright{
     display: flex;
     justify-content: center;
-    background-color: #171717;
+    background: linear-gradient(#121212, #2a2a2a, #242424);
     font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 100;
