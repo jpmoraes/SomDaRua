@@ -10,7 +10,7 @@
 <body>
     <section style="background-color: #055BA6;">
         <div class="container py-5">
-            <form class="card mb-4">
+            <form class="card mb-4" method="post" action="">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-3">
@@ -76,9 +76,10 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="d-flex justify-content-end mb-2" style="margin-right:20px;">
-                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-dark btn-edit">Editar dados</button>
+                    <div class="d-flex justify-content-end mb-2" style="margin-right: 20px;">
+                        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-dark btn-edit" onclick="edit()">Editar dados</button>
                         <button type="submit" class="btn btn-outline-dark btn-send">Enviar</button>
+                        <button type="button" class="btn btn-outline-danger btn-cancel" style="margin-left: 10px;" onclick="window.location.reload();">Cancelar</button>
                     </div>
                 </div>
             </form>

@@ -2,6 +2,10 @@
     display: none;
 }
 
+.btn-cancel {
+    display: none;
+}
+
 .endereco-forms {
     display: none;
 }
