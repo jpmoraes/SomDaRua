@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/e8fafd4bab1ff229bb62067775369b8d?family=Thunderhouse+Pro);
+
 footer {
     position: relative;
     bottom: 0;
@@ -49,10 +51,11 @@ footer {
     flex-direction: column;
     gap: 0.75rem;
     list-style: none;
+    /* font-family: 'Thunderhouse Pro'; */
 }
 
 .footer-list .footer-link{
-    color: #a8a29e;
+    color: #c4611f;
     transition: all 0.4s;
 }
 
@@ -63,11 +66,12 @@ footer {
 .footer_subscribe{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.5rem;
+    /* font-family: 'Thunderhouse Pro'; */
 }
 
 .footer_subscribe p{
-    color: #a8a29e;
+    color: #c4611f;
 }
 
 .input-group{
@@ -108,6 +112,11 @@ footer {
     font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 100;
+}
+
+.h4, h4 {
+    font-family: 'Thunderhouse Pro';
+
 }
 
 @media screen and (max-width: 768px) {
