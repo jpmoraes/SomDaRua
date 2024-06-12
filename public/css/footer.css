@@ -1,0 +1,131 @@
+@import url(https://db.onlinewebfonts.com/c/e8fafd4bab1ff229bb62067775369b8d?family=Thunderhouse+Pro);
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: #f5f5f5;
+}
+
+.footer_container {
+  background: linear-gradient(#065295, #085ea8, #043f72);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 3.5rem;
+}
+
+.footer_social_media {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.footer_social_media .footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #f5f5f5;
+  border-radius: 50%;
+}
+
+#instagram {
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#xicon {
+  background-color: black;
+}
+
+#whatsapp {
+  background-color: #25d366;
+}
+
+.footer_social_media .footer-link:hover {
+  opacity: 0.8;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  /* font-family: 'Thunderhouse Pro'; */
+}
+
+.footer-list .footer-link {
+  color: #c4611f;
+  transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+  color: rgb(242, 160, 7);
+}
+
+.footer_subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* font-family: 'Thunderhouse Pro'; */
+}
+
+.footer_subscribe p {
+  color: #c4611f;
+}
+
+.input-group {
+  position: relative;
+  background-color: #0c0c0c;
+  border-radius: 4px;
+}
+
+.input-group input {
+  all: unset;
+  padding: 0.75rem;
+  width: 100%;
+  padding-left: 65px;
+}
+
+.input-group button {
+  position: absolute;
+  left: 0;
+  background-color: #ff9807;
+  border: none;
+  color: #f5f5f5;
+  padding: 0px 1.25rem;
+  font-size: 1.125rem;
+  height: 100%;
+  border-radius: 4px 0px 0px 4px !important;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.input-group button:hover {
+  opacity: 0.8;
+}
+
+.footer_copyright {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(#121212, #2a2a2a, #242424);
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  font-weight: 100;
+}
+
+.h4, h4 {
+  font-family: "Thunderhouse Pro";
+}
+
+@media screen and (max-width: 768px) {
+  .footer_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 426px) {
+  .footer_container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3rem 2rem;
+  }
+}

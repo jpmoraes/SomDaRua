@@ -1,0 +1,363 @@
+@import url(https://fonts.googleapis.com/css2?family=Krona+One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Koulen&display=swap);
+@import url(https://db.onlinewebfonts.com/c/e8fafd4bab1ff229bb62067775369b8d?family=Thunderhouse+Pro);
+@charset "UTF-8";
+/* ===== Estrutura principal do site ===== */
+body {
+  background-color: #D0CFCC;
+}
+
+.gridMain {
+  display: grid;
+  grid-template: "destaque" 0.5fr "agenda" 400px "genero" 800px "saibaMais" 400px "sobreNos" 0.5fr/1fr;
+  margin: 5vw 0px;
+  gap: 4vw;
+}
+
+.gridMain h1 {
+  font-size: clamp(32px, 4vw, 64px);
+}
+
+.destaque {
+  grid-area: destaque;
+}
+
+.agenda {
+  grid-area: agenda;
+}
+
+.genero {
+  grid-area: genero;
+}
+
+.saibaMais {
+  grid-area: saibaMais;
+}
+
+h1 {
+  font-family: "Thunderhouse Pro";
+  /* font-family: 'Krona One'; */
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 720px) {
+  .gridMain {
+    display: block;
+  }
+  .gridMain h1 {
+    margin-top: 4vw;
+  }
+  .genero {
+    margin-bottom: 4vw;
+  }
+  .sobreNos {
+    margin-top: 4vw;
+  }
+}
+/* ===== Carrossel de Destaques ===== */
+.destaque-inner {
+  border-radius: 50px !important;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.destaque-inner img {
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.destaque-indicators button {
+  width: 1.6vw !important;
+  height: 1.6vw !important;
+  min-height: 20px !important;
+  min-width: 20px !important;
+  border-radius: 50% !important;
+  background-color: #D9D9D9 !important;
+}
+
+.destaque-indicators .active {
+  background-color: #055BA6 !important;
+}
+
+.destaque-indicators button:hover {
+  background-color: #055BA6 !important;
+  transition: 0.5s ease-in-out;
+}
+
+.destaque-icon {
+  min-height: 40px !important;
+  min-width: 40px !important;
+}
+
+.destaque-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23055BA6'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.destaque-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23055BA6'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+/* ===== Agenda ===== */
+#ielements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-rows: 210px;
+  grid-auto-flow: row;
+  max-width: calc(100vw - 10px);
+  max-height: 210px;
+  overflow: hidden;
+  gap: 20px;
+}
+
+.scheduleItem {
+  border-radius: 30px;
+  width: 210px;
+  height: 200px;
+  background: linear-gradient(#EE801B, #be6716, #af5e12);
+  /* border: 8px solid #6D3B0C; */
+  display: grid;
+  grid-template: "dayNumber month" 64px "eventName startTime" 71px "place place" 1fr/97px 1fr;
+  font-family: "Thunderhouse Pro";
+  /* font-family: 'Krona One'; */
+  font-size: 25px;
+}
+
+.dayNumber {
+  grid-area: dayNumber;
+  font-size: 53px;
+  margin-left: 50px;
+}
+
+.month {
+  grid-area: month;
+  font-family: "Thunderhouse Pro";
+  /* font-family: 'Koulen'; */
+  line-height: 25px;
+  width: 52px;
+  padding-top: 15px;
+  margin-top: 5px;
+}
+
+.eventName {
+  grid-area: eventName;
+  font-family: "Thunderhouse Pro";
+  /* font-family: 'Koulen'; */
+  line-height: 25px;
+  padding-left: 5px;
+  padding-top: 15px;
+  margin-left: 10px;
+}
+
+.startTime {
+  font-size: 25px;
+  grid-area: startTime;
+  padding-top: 15px;
+  text-align: right;
+  padding-right: 5px;
+  margin-right: 10px;
+}
+
+.place {
+  font-family: "Koulen";
+  font-size: 15px;
+  grid-area: place;
+  padding-left: 5px;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+#ischeduleNavigation {
+  margin-top: 15px;
+}
+
+.pagination-outer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  font-family: "Thunderhouse Pro";
+  /* font-family: 'Krona One', sans-serif; */
+  display: inline-flex;
+  position: relative;
+}
+
+.pagination li a.page-link {
+  color: #6D3B0C;
+  background: transparent;
+  font-size: 23px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  width: 33px;
+  padding: 0;
+  margin: 0 4px;
+  border: none;
+  border-radius: 0;
+  display: block;
+  position: relative;
+  z-index: 0;
+  transition: all 0.1s ease 0s;
+}
+
+.pagination li:first-child a.page-link,
+.pagination li:last-child a.page-link {
+  font-size: 23px;
+  line-height: 37px;
+}
+
+.pagination li a.page-link:hover,
+.pagination li a.page-link:focus,
+.pagination li.active a.page-link:hover,
+.pagination li.active a.page-link {
+  color: #fff;
+  background: transparent;
+}
+
+.pagination li a.page-link:before {
+  content: "";
+  background-color: #EE801B;
+  height: 100%;
+  width: 100%;
+  transform-origin: center center;
+  transform: perspective(100px) rotateY(35deg);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+
+.pagination li a.page-link:hover:before,
+.pagination li a.page-link:focus:before,
+.pagination li.active a.page-link:hover:before,
+.pagination li.active a.page-link:before {
+  background-color: #c23b19;
+  transform: perspective(100px) rotateY(0);
+}
+
+/* ===== Generos ===== */
+.card__content {
+  position: relative;
+  margin-inline: 40px;
+}
+
+.card__article {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  width: 400px;
+}
+
+.card__image {
+  text-decoration: none;
+}
+
+.card__image img {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.generos-label-background {
+  height: 60px;
+  width: 220px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.generos-label-background h3 {
+  background-color: rgba(201, 126, 41, 0.8);
+  padding: 10px;
+  color: rgb(10, 9, 9);
+  grid-column: 3;
+  text-align: left;
+  font-family: "Thunderhouse Pro";
+  position: absolute;
+  bottom: 0;
+  width: 140%;
+  font-size: 40px;
+}
+
+/* .generos-label-background {
+    background: linear-gradient(#EE801B,#be6716,#af5e12);
+    border: 3px solid #b15805;
+} */
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next {
+  margin-right: -50px;
+}
+
+.swiper-button-prev {
+  margin-left: -50px;
+}
+
+/* ===== Saiba Mais ===== */
+#isaibaMais, #isaibaMais img {
+  position: relative;
+  width: 73vw;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.saibaMaisInner {
+  border-radius: 50px !important;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.saibaMaisItem {
+  transition: 0.5s ease-in-out;
+}
+
+#ilabel {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 400px;
+  text-align: center;
+  font-size: 9vw;
+  color: white;
+  text-decoration: none;
+  filter: drop-shadow(2px 2px black);
+  z-index: 10;
+}
+
+/* ===== Sobre Nós ===== */
+.sobreNos {
+  grid-area: sobreNos;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sobreNos h1 {
+  width: 90vw;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.sobreNos p {
+  margin: 0px;
+  width: 90vw;
+  padding: 50px;
+  background-color: rgba(242, 160, 7, 0.3);
+  border-radius: 3vw;
+  text-align: justify;
+  font-size: 18px;
+  text-indent: 4vw;
+}

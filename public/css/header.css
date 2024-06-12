@@ -1,0 +1,135 @@
+@import url(https://db.onlinewebfonts.com/c/e8fafd4bab1ff229bb62067775369b8d?family=Thunderhouse+Pro);
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.headerSom {
+  grid-area: headerSom;
+  background-color: #055ba6;
+  font-family: "Thunderhouse Pro";
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+@media (max-width: 991px) {
+  .headerSom {
+    height: 90px;
+  }
+}
+.bg-body-tertiary {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 30px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.nav-link:hover {
+  color: #F2B807;
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 2px;
+    background-color: #F2B807;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-link:hover::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+.logoHeader {
+  width: 6vW;
+  min-width: 80px;
+  margin-right: 140px;
+  margin-top: 4px;
+  margin-left: 10px;
+}
+
+@media (max-width: 1175px) {
+  .logoHeader {
+    width: 6vW;
+    min-width: 80px;
+    margin-right: 0px;
+    margin-top: 4px;
+    margin-left: 10px;
+  }
+}
+.offcanvas-header, .offcanvas-body {
+  background-color: #055BA6;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+header {
+  margin: 10px;
+}
+
+.login-button {
+  grid-area: login-button;
+  background-color: #D96248;
+  color: #fff;
+  font-size: 30px;
+  padding: 0px 20px 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+  margin-left: 100px;
+}
+
+@media (max-width: 1188px) {
+  .login-button {
+    margin-left: 0px;
+  }
+}
+.login-button:hover {
+  background-color: #F2B807;
+}
+
+.logoHeader-offcanva {
+  width: 150px;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  align-content: center;
+}
+
+.navbar-toggler, .navbar-toggler-icon {
+  color: #fff !important;
+}
+
+/* .gridheader{
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-areas: 
+    "logoHeader" "headertextomenu" "login-button";
+}
+
+.headertextomenu{
+    grid-area: headertextomenu;
+} */
