@@ -11,7 +11,6 @@ class CreateGeneroTable extends Migration
         Schema::create('genero', function (Blueprint $table) {
             $table->id('id_genero');
             $table->string('nome', 45)->nullable();
-            $table->timestamps();
         });
     }
 
