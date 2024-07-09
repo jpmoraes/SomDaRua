@@ -12,16 +12,14 @@ class credenciaisController extends Controller
     {
         $data = $request->all();
 
-        $cpf = $data["cpf"];
         $nome = $data["nome"];
         $data_cadastro = $data["data_cadastro"];
         $credenciais_id = $data["credenciais_id"];
 
         $empresario = new Empresario();
-        $empresario->cpf = $cpf;
         $empresario->nome = $nome;
         $empresario->data_cadastro = $data_cadastro;
-        // $empresario->data_cadastro = $data_cadastro;
+
 
         $empresario->save();
         
@@ -37,7 +35,6 @@ class credenciaisController extends Controller
     {
         $updateEmpresario = Empresario::findOrFail($id);
 
-        $updateEmpresario->cpf = $request->novo_cpf;
         $updateEmpresario->nome = $request->novo_nome;
         $updateEmpresario->data_cadastro = $request->novo_data_cadastro;
 

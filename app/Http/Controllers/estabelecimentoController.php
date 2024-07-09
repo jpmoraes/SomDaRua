@@ -12,16 +12,12 @@ class estabelecimentoController extends Controller
     {
         $data = $request->all();
 
-        $id_estabelecimento = $data["id_estabelecimento"];
         $nome = $data["nome"];
         $cpf_cnpj = $data["cpf_cnpj"];
-        // $empresario_cpf = $data["empresario_cpf"];
 
         $estabelecimento = new Estabelecimento();
-        $estabelecimento->id_estabelecimento = $id_estabelecimento;
         $estabelecimento->nome = $nome;
         $estabelecimento->cpf_cnpj = $cpf_cnpj;
-        // $empresario->empresario_cpf = $empresario_cpf;
 
         $estabelecimento->save();
         
@@ -37,7 +33,6 @@ class estabelecimentoController extends Controller
     {
         $updateEstabelecimento = Estabelecimento::findOrFail($id);
 
-        $updateEstabelecimento->id_estabelecimento = $request->novo_id_estabelecimento;
         $updateEstabelecimento->nome = $request->novo_nome;
         $updateEstabelecimento->cpf_cnpj = $request->novo_cpf_cnpj;
 
