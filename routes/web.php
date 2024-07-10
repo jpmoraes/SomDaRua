@@ -3,6 +3,7 @@
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\saibamaisController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\pageGenerosController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,5 +22,6 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/index', [homeController::class,'index']);
 Route::get('/saibamais', [saibamaisController::class,'index']);
+Route::get('/generos', [pageGenerosController::class,'index']);
 
 require __DIR__.'/auth.php';

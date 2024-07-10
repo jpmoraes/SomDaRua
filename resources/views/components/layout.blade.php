@@ -40,7 +40,7 @@
                   <a class="nav-link mx-lg-2" href="#">Agenda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="#">Gênero</a>
+                    <a class="nav-link mx-lg-2" href="/generos">Gênero</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link mx-lg-2" href="#">Salvador</a>
