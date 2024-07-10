@@ -4,12 +4,16 @@
     "/css/salvador.css": "/css/salvador.css",
     "/css/header.css": "/css/header.css",
     "/css/footer.css": "/css/footer.css",
+    "/css/login.css": "/css/login.css",
     "/css/dados.css": "/css/dados.css",
     "/css/app.css": "/css/app.css",
     "/css/swiper-bundle.min.css": "/css/swiper-bundle.min.css",
+    "/css/rate.css": "/css/rate.css",
     "/js/dados.js": "/js/dados.js",
+    "/js/rate.js": "/js/rate.js",
     "/js/index-swiper.js": "/js/index-swiper.js",
     "/js/swiper-bundle.min.js": "/js/swiper-bundle.min.js",
+    "/js/login.js": "/js/login.js",
     "/assets/img/index/destaque/Carrossel1.png": "/assets/img/index/destaque/Carrossel1.png",
     "/assets/img/index/destaque/Carrossel2.png": "/assets/img/index/destaque/Carrossel2.png",
     "/assets/img/index/destaque/Carrossel3.png": "/assets/img/index/destaque/Carrossel3.png",
@@ -30,5 +34,6 @@
     "/assets/img/saibaMais/gamboa.png": "/assets/img/saibaMais/gamboa.png",
     "/assets/img/saibaMais/pelourinho.png": "/assets/img/saibaMais/pelourinho.png",
     "/assets/img/saibaMais/rioVermelho.png": "/assets/img/saibaMais/rioVermelho.png",
-    "/assets/img/som_rua.png": "/assets/img/som_rua.png"
+    "/assets/img/som_rua.png": "/assets/img/som_rua.png",
+    "/fonts/icomoon.woff": "/fonts/icomoon.woff"
 }
