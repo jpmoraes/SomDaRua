@@ -44,4 +44,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function empresario()
+    {
+        return $this->hasMany(Empresario::class, 'id', 'id_credenciais');
+    }
 }

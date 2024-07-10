@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Empresario extends Model
 {
     use HasFactory;
-    public function credenciais()
+    public function User()
     {
-        return $this->belongsTo(Credenciais::class, 'credenciais_id', 'id_credenciais');
+        return $this->belongsTo(User::class, 'id', 'id_credenciais');
     }
 
     public function estabelecimento()
