@@ -23,7 +23,6 @@ Route::middleware('auth')->group(function () {
 Route::get('/index', [homeController::class,'index']);
 Route::get('/saibamais', [saibamaisController::class,'index']);
 Route::get('/generos', [pageGenerosController::class,'index']);
-
 Route::get('/avaliacao', function () {
     return view('avaliacao');
 });
