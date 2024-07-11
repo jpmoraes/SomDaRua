@@ -22,6 +22,8 @@ mix.webpackConfig({
 
 mix.js('resources/js/app.js', 'public/js/')
    .sass('resources/css/app.scss', 'public/css')
+   .sass('resources/css/admin.scss', 'public/css')
+   .sass('resources/css/recuperacao.scss', 'public/css')
    .sass('resources/css/pageGeneros.scss', 'public/css')
    .sass('resources/css/footer.scss', 'public/css')
    .sass('resources/css/index.scss', 'public/css')
