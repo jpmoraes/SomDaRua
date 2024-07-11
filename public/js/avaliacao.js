@@ -120,6 +120,8 @@ classificar({
     }
 
     document.getElementById('btn').innerHTML = "<button type='button' onclick='location.reload()'> Enviar </button>";
+    console.log("teste");
+
   }
 });
 

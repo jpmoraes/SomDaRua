@@ -6,10 +6,6 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\pageGenerosController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -20,7 +16,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/index', [homeController::class,'index']);
+Route::get('/', [homeController::class,'index']);
 Route::get('/saibamais', [saibamaisController::class,'index']);
 Route::get('/generos', [pageGenerosController::class,'index']);
 Route::get('/avaliacao', function () {

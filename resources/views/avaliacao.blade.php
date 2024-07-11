@@ -5,7 +5,7 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta charset='utf-8'>
-  <link rel='stylesheet' type='text/css' media='screen' href="{{asset('css/rate.css')}}">
+  <link rel='stylesheet' type='text/css' media='screen' href="{{asset('css/avaliacao.css')}}">
 </head>
 <body>
   <main>
@@ -15,6 +15,6 @@
     <div id="msg"></div>
     <div id="btn"></div>
   </main>
-  <script src="{{asset('js/rate.js')}}"></script>
+  <script src="{{asset('js/avaliacao.js')}}"></script>
 </body>
 </html>
