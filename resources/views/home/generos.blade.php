@@ -43,47 +43,47 @@
 
             <div class="item-galeria">
                 <p>Reggae</p>
-                <img class="item-galeria-generos" src="assets/img/pageGeneros/reggae.jpg" alt="">
+                <img class="item-galeria-generos" src="assets/img/index/generos/reggae.jpg" alt="">
             </div>
 
             <div class="item-galeria">
                 <p>Eletrônica</p>
-                <img class="item-galeria-generos" src="assets/img/pageGeneros/eletro.jpg" alt="">
+                <img class="item-galeria-generos" src="assets/img/index/generos/eletro.jpg" alt="">
             </div>
 
             <div class="item-galeria">
                 <p>Forro/Sertanejo</p>
-                <img class="item-galeria-generos" src="assets/img/pageGeneros/forro.jpg" alt="">
+                <img class="item-galeria-generos" src="assets/img/index/generos/forro.jpg" alt="">
             </div>
 
             <div class="item-galeria">
                 <p>Jazz</p>
-                <img class="item-galeria-generos" src="assets/img/pageGeneros/jzz.jpg" alt="">
+                <img class="item-galeria-generos" src="assets/img/index/generos/jzz.jpg" alt="">
             </div>
 
             <div class="item-galeria">
                 <p>Rap/Trap</p>
-                <img class="item-galeria-generos" src="assets/img/pageGeneros/rap.jpg" alt="">
+                <img class="item-galeria-generos" src="assets/img/index/generos/rap.jpg" alt="">
             </div>
 
             <div class="item-galeria">
                 <p>Rock/Pop</p>
-                <img class="item-galeria-generos" src="assets/img/pageGeneros/rck.jpg" alt="">
+                <img class="item-galeria-generos" src="assets/img/index/generos/rck.jpg" alt="">
             </div class="item-galeria">
 
             <div class="item-galeria">
                 <p>Samba</p>
-                <img class="item-galeria-generos" src="assets/img/pageGeneros/samba.jpg" alt="">
+                <img class="item-galeria-generos" src="assets/img/index/generos/samba.jpg" alt="">
             </div>
 
             <div class="item-galeria">
                 <p>MPB</p>
-                <img class="item-galeria-generos" src="assets/img/pageGeneros/mpb.jpg" alt="">
+                <img class="item-galeria-generos" src="assets/img/index/generos/mpb.jpg" alt="">
             </div>
 
             <div class="item-galeria">
                 <p>Axé/Pagode</p>
-                <img class="item-galeria-generos" src="assets/img/pageGeneros/axepgd.jpg" alt="">
+                <img class="item-galeria-generos" src="assets/img/index/generos/axepgd.jpg" alt="">
             </div>
         </div>
 

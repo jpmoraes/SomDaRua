@@ -36,40 +36,40 @@
       <div class="d-flex justify-content-center">
         <div id="ielements">
           <div class="scheduleItem">
-            <div class="dayNumber">03</div>
-            <div class="month">de Maio</div>
-            <div class="eventName">Reg de Fullstack</div>
+            <div class="dayNumber">18</div>
+            <div class="month">de Julho</div>
+            <div class="eventName">Samba na Laje</div>
             <div class="startTime">19h</div>
-            <div class="place">Casa do Comercio - Pituba</div>
+            <div class="place">Pituba</div>
           </div>
           <div class="scheduleItem">
-            <div class="dayNumber">03</div>
-            <div class="month">de Maio</div>
-            <div class="eventName">Reg de Fullstack</div>
-            <div class="startTime">19h</div>
-            <div class="place">Casa do Comercio - Pituba</div>
+            <div class="dayNumber">20</div>
+            <div class="month">de Julho</div>
+            <div class="eventName">Commons Bar</div>
+            <div class="startTime">22h</div>
+            <div class="place">Barra</div>
           </div>
           <div class="scheduleItem">
-            <div class="dayNumber">03</div>
-            <div class="month">de Maio</div>
-            <div class="eventName">Reg de Fullstack</div>
+            <div class="dayNumber">21</div>
+            <div class="month">de Julho</div>
+            <div class="eventName">Jam no MAM</div>
             <div class="startTime">19h</div>
-            <div class="place">Casa do Comercio - Pituba</div>
+            <div class="place">Av. Contorno</div>
           </div>
 
           <div class="scheduleItem">
-            <div class="dayNumber">03</div>
-            <div class="month">de Maio</div>
-            <div class="eventName">Reg de Fullstack</div>
-            <div class="startTime">19h</div>
-            <div class="place">Casa do Comercio - Pituba</div>
+            <div class="dayNumber">25</div>
+            <div class="month">de Julho</div>
+            <div class="eventName">Pagode delas</div>
+            <div class="startTime">20h</div>
+            <div class="place">2 de Julho</div>
           </div>
           <div class="scheduleItem">
-            <div class="dayNumber">03</div>
-            <div class="month">de Maio</div>
-            <div class="eventName">Reg de Fullstack</div>
-            <div class="startTime">19h</div>
-            <div class="place">Casa do Comercio - Pituba</div>
+            <div class="dayNumber">29</div>
+            <div class="month">de Julho</div>
+            <div class="eventName">10 horas de Arrocha</div>
+            <div class="startTime">17h</div>
+            <div class="place">WET'n' Wild</div>
           </div>
         </div>
       </div>
@@ -101,16 +101,16 @@
           <div class="swiper-wrapper">
             <article class="card__article swiper-slide">
               <a href="#" class="card__image">
-                <img src="assets/img/index/generos/musica-classica.png" alt="image">
+                <img src="assets/img/index/generos/mpb.jpg" alt="image">
                 <div class="generos-label-background">
-                  <h3>Classica</h3>
+                  <h3>MPB</h3>
                 </div>
               </a>
             </article>
 
             <article class="card__article swiper-slide">
               <a href="#" class="card__image">
-                <img src="assets/img/index/generos/musica-eletronica.png" alt="image">
+                <img src="assets/img/index/generos/eletro.jpg" alt="image">
                 <div class="generos-label-background">
                   <h3>Eletrônica</h3>
                 </div>
@@ -119,7 +119,7 @@
 
             <article class="card__article swiper-slide">
               <a href="#" class="card__image">
-                <img src="assets/img/index/generos/musica-forro.png" alt="image">
+                <img src="assets/img/index/generos/forró.jpg" alt="image">
                 <div class="generos-label-background">
                   <h3>Forró</h3>
                 </div>
@@ -128,7 +128,7 @@
 
             <article class="card__article swiper-slide">
               <a href="#" class="card__image">
-                <img src="assets/img/index/generos/musica-jazz.png" alt="image">
+                <img src="assets/img/index/generos/jazz.jpg" alt="image">
                 <div class="generos-label-background">
                   <h3>Jazz</h3>
                 </div>
@@ -137,16 +137,16 @@
 
             <article class="card__article swiper-slide">
               <a href="#" class="card__image">
-                <img src="assets/img/index/generos/musica-rap.png" alt="image">
+                <img src="assets/img/index/generos/reggae.jpg" alt="image">
                 <div class="generos-label-background">
-                  <h3>Rap</h3>
+                  <h3>Reggae</h3>
                 </div>
               </a>
             </article>
 
             <article class="card__article swiper-slide">
               <a href="#" class="card__image">
-                <img src="assets/img/index/generos/musica-rock.png" alt="image">
+                <img src="assets/img/index/generos/rock.jpg" alt="image">
                 <div class="generos-label-background">
                   <h3>Rock</h3>
                 </div>
@@ -155,9 +155,27 @@
 
             <article class="card__article swiper-slide">
               <a href="#" class="card__image">
-                <img src="assets/img/index/generos/musica-samba.png" alt="image">
+                <img src="assets/img/index/generos/axe.jpg" alt="image">
+                <div class="generos-label-background">
+                  <h3>AXÉ</h3>
+                </div>
+              </a>
+            </article>
+
+            <article class="card__article swiper-slide">
+              <a href="#" class="card__image">
+                <img src="assets/img/index/generos/samba.jpg" alt="image">
                 <div class="generos-label-background">
                   <h3>Samba</h3>
+                </div>
+              </a>
+            </article>
+
+            <article class="card__article swiper-slide">
+              <a href="#" class="card__image">
+                <img src="assets/img/index/generos/rap.jpg" alt="image">
+                <div class="generos-label-background">
+                  <h3>RAP</h3>
                 </div>
               </a>
             </article>
@@ -171,7 +189,7 @@
     </section>
 
     <section class="saibaMais d-flex justify-content-center">
-      <a href="#" id="isaibaMais">
+      <a href="/saibamais" id="isaibaMais">
         <div class="carousel slide saibaMais carousel-fade" data-bs-ride="carousel">
           <div class="carousel-inner saibaMaisInner">
             <div class="carousel-item active saibaMaisItem" data-bs-interval="5000">
@@ -213,4 +231,5 @@
       </p>
     </section>
   </main>
+
 </x-layout>

@@ -7,7 +7,7 @@ footer {
 }
 
 .footer_container {
-  background: linear-gradient(#065295, #085ea8, #043f72);
+  background: linear-gradient(#000000, #110030, #432300);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 3rem 3.5rem;
