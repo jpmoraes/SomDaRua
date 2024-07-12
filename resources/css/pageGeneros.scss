@@ -97,9 +97,9 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #ffffff;
-}
+// body {
+//   background: #ffffff;
+// }
 
 .menu {
   background: #F2A007;
@@ -118,10 +118,6 @@ body {
     
   }
 }
-
-/* .menu:hover {
-    box-shadow: 0 0 0 8px #F2A007, 0 0 0 8px #F2A007;
-} */
 
 .hamburguer {
   position: relative;
@@ -229,7 +225,7 @@ a{
 
 .btn-success{
     background-color: rgb(3, 115, 42) !important;
-    border-radius: 50px !important;
+    border-radius: 50px;
     margin-bottom: 15px;
     position: relative;
 
@@ -284,8 +280,5 @@ input:checked ~ label .button-generos .button-eventos-gratuitos .btn-success {
                 @media screen and (max-width: 425px) {
                     max-width: 130px;
                     min-height: auto;
-        }
-    }
-}
-}
+        }}}}
 
