@@ -1,10 +1,15 @@
 <?php
 
+use App\Http\Controllers\empresarioController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\saibamaisController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\pageGenerosController;
+
+
 use Illuminate\Support\Facades\Route;
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -23,6 +28,7 @@ Route::get('/avaliacao', function () {
     return view('avaliacao');
 });
 
+Route::get('/usuario/cadastro', [empresarioController::class,'pageCadastro']);
 
 
 require __DIR__.'/auth.php';
