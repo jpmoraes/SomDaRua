@@ -1,14 +1,43 @@
 const mix = require('laravel-mix');
 
-mix.sass('resources/css/footer.scss', 'public/css')
-mix.sass('resources/css/index.scss', 'public/css')
-mix.sass('resources/css/header.scss', 'public/css')
-mix.sass('resources/css/dados.scss', 'public/css')
-mix.sass('resources/css/salvador.scss', 'public/css')
-mix.sass('resources/css/swiper-bundle.min.scss', 'public/css')
+mix.webpackConfig({
+    module: {
+        rules: [{
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/plugin-syntax-dynamic-import']
+                    }
+                }
+            }]
+    },
+    resolve: {
+        extensions: ['.js', '.json'],
+        mainFields: ['browser', 'module', 'main']
+    }
+});
 
-mix.copy('resources/js/dados.js', 'public/js/')
-mix.copy('resources/js/index-swiper.js', 'public/js/')
-mix.copy('resources/js/swiper-bundle.min.js', 'public/js/')
-
-mix.copy('resources/assets', "public/assets/")
+mix.js('resources/js/app.js', 'public/js/')
+   .sass('resources/css/app.scss', 'public/css')
+   .sass('resources/css/usuariocad.scss', 'public/css')
+   .sass('resources/css/admin.scss', 'public/css')
+   .sass('resources/css/recuperacao.scss', 'public/css')
+   .sass('resources/css/pageGeneros.scss', 'public/css')
+   .sass('resources/css/footer.scss', 'public/css')
+   .sass('resources/css/index.scss', 'public/css')
+   .sass('resources/css/header.scss', 'public/css')
+   .sass('resources/css/dados.scss', 'public/css')
+   .sass('resources/css/salvador.scss', 'public/css')
+   .sass('resources/css/avaliacao.scss', 'public/css')
+   .sass('resources/css/swiper-bundle.min.scss', 'public/css')
+   .sass('resources/css/login.scss', 'public/css')
+   .copy('resources/js/dados.js', 'public/js/')
+   .copy('resources/js/avaliacao.js', 'public/js/')
+   .copy('resources/js/index-swiper.js', 'public/js/')
+   .copy('resources/js/swiper-bundle.min.js', 'public/js/')
+   .copy('resources/js/login.js', 'public/js/')
+   .copy('resources/assets', 'public/assets/')
+   .copy('resources/fonts', 'public/fonts/');

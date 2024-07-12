@@ -1,0 +1,80 @@
+main {
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* Media Query para telas menores */
+@media screen and (max-width: 600px) {
+  .centered-content {
+    width: 100%; /* Utiliza toda a largura da tela em telas menores */
+  }
+}
+
+.all {
+  /* margin: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main h2 {
+  text-align: center;
+}
+
+@font-face {
+  font-family: "estrela";
+  src: url(../fonts/icomoon.woff);
+}
+
+.elemento { 
+  display: flex;
+ }
+
+.star {
+  font-family: "estrela" !important;
+  font-size: 80px; 
+  color: #d1d1d1;
+  font-style: normal; 
+  font-weight: normal; 
+  font-variant: normal;
+  text-transform: none; 
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}
+
+.star::before { 
+  content: "\e9d9"; 
+}
+
+.star.onp { color: #d30000; }
+.star.onr { color: #ff2f00; }
+.star.onm { color: #ff8c00; }
+.star.onb { color: #ffe000; }
+.star.ono { color: #1aff00; }
+
+.star.off {
+pointer-events: none;
+}
+
+#msg {
+  margin-top: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 26px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+#btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#btn button {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 26px;
+  font-weight: bolder;
+  cursor: pointer;
+}

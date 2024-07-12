@@ -14,7 +14,7 @@ class CreateEmpresarioTable extends Migration
             $table->unsignedBigInteger('credenciais_id');
 
             $table->unique('cpf');
-            $table->foreign('credenciais_id')->references('id_credenciais')->on('credenciais')->onDelete('cascade');
+            $table->foreign('credenciais_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
