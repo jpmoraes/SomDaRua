@@ -4,7 +4,7 @@
 @charset "UTF-8";
 /* ===== Estrutura principal do site ===== */
 body {
-  background-color: #D0CFCC;
+  background: linear-gradient(#F2A007, #df9407, #d38b06);
 }
 
 .gridMain {
@@ -58,7 +58,6 @@ h1 {
 }
 /* ===== Carrossel de Destaques ===== */
 .destaque-inner {
-  border-radius: 50px !important;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -78,11 +77,11 @@ h1 {
 }
 
 .destaque-indicators .active {
-  background-color: #055BA6 !important;
+  background-color: #000000 !important;
 }
 
 .destaque-indicators button:hover {
-  background-color: #055BA6 !important;
+  background-color: #000000 !important;
   transition: 0.5s ease-in-out;
 }
 
@@ -112,10 +111,12 @@ h1 {
 }
 
 .scheduleItem {
-  border-radius: 30px;
+  border-radius: 50%;
+  border-color: #000000;
+  border-width: 50px;
   width: 210px;
   height: 200px;
-  background: linear-gradient(#EE801B, #be6716, #af5e12);
+  background: rgb(5, 91, 166);
   /* border: 8px solid #6D3B0C; */
   display: grid;
   grid-template: "dayNumber month" 64px "eventName startTime" 71px "place place" 1fr/97px 1fr;
@@ -125,6 +126,7 @@ h1 {
 }
 
 .dayNumber {
+  color: white;
   grid-area: dayNumber;
   font-size: 53px;
   margin-left: 50px;
@@ -138,6 +140,7 @@ h1 {
   width: 52px;
   padding-top: 15px;
   margin-top: 5px;
+  color: white;
 }
 
 .eventName {
@@ -147,7 +150,8 @@ h1 {
   line-height: 25px;
   padding-left: 5px;
   padding-top: 15px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  color: white;
 }
 
 .startTime {
@@ -157,6 +161,7 @@ h1 {
   text-align: right;
   padding-right: 5px;
   margin-right: 10px;
+  color: white;
 }
 
 .place {
@@ -165,8 +170,10 @@ h1 {
   grid-area: place;
   padding-left: 5px;
   align-items: center;
-  margin-top: 15px;
-  margin-left: 10px;
+  margin-top: 10px;
+  margin-left: 25px;
+  justify-content: center;
+  color: white;
 }
 
 #ischeduleNavigation {
@@ -186,7 +193,7 @@ h1 {
 }
 
 .pagination li a.page-link {
-  color: #6D3B0C;
+  color: #f3ecea;
   background: transparent;
   font-size: 23px;
   font-weight: 600;
@@ -220,7 +227,7 @@ h1 {
 
 .pagination li a.page-link:before {
   content: "";
-  background-color: #EE801B;
+  background-color: #272421;
   height: 100%;
   width: 100%;
   transform-origin: center center;
@@ -236,7 +243,7 @@ h1 {
 .pagination li a.page-link:focus:before,
 .pagination li.active a.page-link:hover:before,
 .pagination li.active a.page-link:before {
-  background-color: #c23b19;
+  background-color: #0c0156;
   transform: perspective(100px) rotateY(0);
 }
 
@@ -308,14 +315,13 @@ h1 {
 /* ===== Saiba Mais ===== */
 #isaibaMais, #isaibaMais img {
   position: relative;
-  width: 73vw;
+  width: 100vw;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .saibaMaisInner {
-  border-radius: 50px !important;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -330,6 +336,7 @@ h1 {
   height: 100%;
   line-height: 400px;
   text-align: center;
+  font-family: "Thunderhouse Pro";
   font-size: 9vw;
   color: white;
   text-decoration: none;
@@ -355,7 +362,7 @@ h1 {
   margin: 0px;
   width: 90vw;
   padding: 50px;
-  background-color: rgba(242, 160, 7, 0.3);
+  background-color: rgba(67, 44, 2, 0.3);
   border-radius: 3vw;
   text-align: justify;
   font-size: 18px;

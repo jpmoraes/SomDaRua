@@ -6,12 +6,11 @@ body{
 }
 .headerSom{
     grid-area: headerSom;
-    background-color: #055ba6;
+    background-color: #000000;
     font-family: 'Thunderhouse Pro';
     font-size: 20px;
     display: flex;
     justify-content: center;
-    border-radius: 15px;
 }
 @media (max-width: 991px) {
     .headerSom{
@@ -75,7 +74,7 @@ body{
 }
 
 .offcanvas-header, .offcanvas-body{
-    background-color: #055BA6;
+    background-color: #000000;
     backdrop-filter: blur(50px);
 }
 

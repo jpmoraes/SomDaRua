@@ -1,27 +1,130 @@
-.btn-send {
-  display: none;
+@import url(https://db.onlinewebfonts.com/c/e34e16fdcaf1b7ba681aed2f33af988c?family=Thunderhouse+W15+Medium);
+@import url(https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap);
+.titulo {
+  font-family: "Thunderhouse W15 Medium";
+  font-size: clamp(20px, 10vw, 100px);
+  color: white;
+  font-style: normal;
+  font-weight: 400;
 }
 
-.btn-cancel {
-  display: none;
+.texto {
+  font-family: "Nunito", sans-serif;
+  color: white;
+  margin: 80px;
+  text-align: justify;
+  font-size: clamp(12px, 2vw, 20px);
 }
 
-.endereco-forms {
-  display: none;
+.sobressa {
+  display: grid;
+  grid-template: "pelourinho" 900px "rio-vermelho" 900px "barra" 900px "gamboa" 900px/1fr;
 }
 
-#itelefone {
-  display: none;
+.pelourinho {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5em;
+  background: #265F28;
+  align-content: center;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  grid-area: pelourinho;
 }
 
-#icpf {
-  display: none;
+.txt-pelourinho {
+  height: 900px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
-#iemail {
-  display: none;
+.img-pelourinho {
+  height: 900px;
+  width: 100%;
+  background-image: url(/images/pelourinho.png?e0ae24d88e929f9593247501dad8e1c6);
+  background-size: cover;
 }
 
-.nome-forms {
-  display: none;
+.rio-vermelho {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5em;
+  background: #4FB5FF;
+  align-content: center;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  grid-area: rio-vermelho;
+}
+
+.txt-rio-vermelho {
+  height: 900px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.img-rio-vermelho {
+  height: 900px;
+  width: 100%;
+  background-image: url(/images/rioVermelho.png?f577bd95aef2fa98042f4fd903627360);
+  background-size: cover;
+}
+
+.barra {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5em;
+  background: #D9B700;
+  align-content: center;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  grid-area: barra;
+}
+
+.txt-barra {
+  height: 900px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.img-barra {
+  height: 900px;
+  width: 100%;
+  background-image: url(/images/barra.png?d773bc4372639706e0e2869013d99112);
+  background-size: cover;
+}
+
+.gamboa {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5em;
+  background: #F40000;
+  align-content: center;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  grid-area: gamboa;
+}
+
+.txt-gamboa {
+  height: 900px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.img-gamboa {
+  height: 900px;
+  width: 100%;
+  background-image: url(/images/gamboa.png?7ee5cacb24701ef2d9f14fce35626ad9);
+  background-size: cover;
 }

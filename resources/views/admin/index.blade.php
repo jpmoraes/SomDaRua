@@ -1,4 +1,4 @@
-<x-layoutAdm css="css/adm.css">
+<x-layoutAdm css="css/admin.css">
 
   <div class="container mt-4">
     <div class="text-center mb-4">
