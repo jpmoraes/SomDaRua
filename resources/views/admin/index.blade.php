@@ -7,9 +7,9 @@
     <div class="filter-container mb-4">
       <label for="filtro" class="me-2">Filtro</label>
       <select id="filtro" class="form-select w-auto">
-        <option value="data">Data de evento</option>
-        <option value="Maior">Maior avaliação</option>
-        <option value="Menor">Menor avaliação</option>
+        <option value="1">Data de evento</option>
+        <option value="2"></option>
+        <option value="3">Maior avaliação</option>   
       </select>
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
