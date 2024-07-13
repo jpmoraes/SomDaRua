@@ -1,0 +1,33 @@
+* {
+  justify-content: center;
+}
+
+.input-group2 {
+  row-gap: 50px;
+  text-align: center;
+}
+
+.usuario {
+  width: 300px;
+  height: 40px;
+}
+
+.input-group2 input {
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 5px;
+}
+
+.btnpronto {
+  align-items: center;
+  justify-content: center;
+}
+
+.form-containe input {
+  row-gap: 20px;
+  gap: 20px;
+}
+
+.botaodiv {
+  display: flex;
+}
