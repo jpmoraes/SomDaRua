@@ -20,7 +20,7 @@
 <body>
   <header class="header">
     <div class="headerSom">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <img src="assets/img/som_rua.png" class="logoHeader" alt="Logo Som da Rua">
       </a>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -45,18 +45,15 @@
                   <a class="nav-link mx-lg-2" href="/generos">Gênero</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="#">Salvador</a>
+                  <a class="nav-link mx-lg-2" href="/saibamais">Salvador</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mx-lg-2" href="#">Sobre Nós</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="#">Meu evento</a>
-                </li>
               </ul>
             </div>
           </div>
-          <a href="#" class="login-button">Meu evento</a>
+          <a href="/dashboard" class="login-button">Meu evento</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

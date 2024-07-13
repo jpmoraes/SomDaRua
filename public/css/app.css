@@ -862,9 +862,12 @@ select {
 .-mt-px {
   margin-top: -1px;
 }
+<<<<<<< Updated upstream
 .mb-0 {
   margin-bottom: 0px;
 }
+=======
+>>>>>>> Stashed changes
 .mb-12 {
   margin-bottom: 3rem;
 }

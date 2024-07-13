@@ -36,9 +36,9 @@
                 <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
 
                 <div class="flex items-center justify-end mt-4">
-                    <x-primary-button class="ms-4">
-                        {{ __('Crie sua Conta') }}
-                    </x-primary-button>
+                <button type="submit" class="btn btn-primary">
+                    Crie sua Conta
+                </button>
                 </div>
 
             </form>
@@ -63,9 +63,9 @@
                         </a>
                     @endif
 
-                    <x-primary-button class="ms-3">
-                        {{ __('Entrar') }}
-                    </x-primary-button>
+                <button type="submit" class="btn btn-primary">
+                    Login
+                </button>
                 </div>
             </form>
         </div>

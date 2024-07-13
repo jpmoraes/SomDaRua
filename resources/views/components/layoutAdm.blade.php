@@ -15,7 +15,9 @@
 
     <link rel="stylesheet" href="{{ asset($css)}}">
 </head>
-<header class="header2">
+
+<body>
+    <header class="header2">
         <nav class="menu-hamburger">
 
             <input id="menu-hamburguer" type="checkbox" />
@@ -28,7 +30,7 @@
             <ul class="menu-hamburguer-elements show">
 
                 <div class="img_topo">
-                    <img src="{{asset("assets/img/som_rua.png") }}" alt="Descrição da imagem">
+                    <img src="assets/img/som_rua.png" alt="Descrição da imagem">
                 </div>
 
                 <li>
@@ -40,6 +42,17 @@
 
                 <li>
                     <a href="#">Ajuda/Suporte</a>
+                </li>
+                <li>
+                    <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+
+                                <a href="route('logout')"
+                                        onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                                </a>
+                            </form>                
                 </li>
             </ul>
         </nav>

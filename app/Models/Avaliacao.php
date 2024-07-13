@@ -9,6 +9,8 @@ class Avaliacao extends Model
 {
     use HasFactory;
 
+    protected $table = "avaliacao";
+    
     public function evento()
     {
         return $this->belongsTo(Evento::class, 'evento_id', 'id_evento');

@@ -3,12 +3,22 @@
     "/css/index.css": "/css/index.css",
     "/css/salvador.css": "/css/salvador.css",
     "/css/dados.css": "/css/dados.css",
+<<<<<<< Updated upstream
     "/css/footer.css": "/css/footer.css",
     "/css/pageGeneros.css": "/css/pageGeneros.css",
     "/css/recuperacao.css": "/css/recuperacao.css",
     "/css/login.css": "/css/login.css",
     "/css/header.css": "/css/header.css",
     "/css/admin.css": "/css/admin.css",
+=======
+    "/css/pageGeneros.css": "/css/pageGeneros.css",
+    "/css/recuperacao.css": "/css/recuperacao.css",
+    "/css/login.css": "/css/login.css",
+    "/css/header.css": "/css/header.css",
+    "/css/footer.css": "/css/footer.css",
+    "/css/admin.css": "/css/admin.css",
+    "/css/usuariocad.css": "/css/usuariocad.css",
+>>>>>>> Stashed changes
     "/css/app.css": "/css/app.css",
     "/css/swiper-bundle.min.css": "/css/swiper-bundle.min.css",
     "/css/avaliacao.css": "/css/avaliacao.css",

@@ -5498,6 +5498,22 @@ module.exports = Array.isArray || function (arr) {
 
 /***/ }),
 
+<<<<<<< Updated upstream
+=======
+/***/ "./resources/css/footer.scss":
+/*!***********************************!*\
+  !*** ./resources/css/footer.scss ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+>>>>>>> Stashed changes
 /***/ "./resources/css/index.scss":
 /*!**********************************!*\
   !*** ./resources/css/index.scss ***!
@@ -5602,6 +5618,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< Updated upstream
 /***/ "./resources/css/admin.scss":
 /*!**********************************!*\
   !*** ./resources/css/admin.scss ***!
@@ -5632,6 +5649,12 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************!*\
   !*** ./resources/css/pageGeneros.scss ***!
   \****************************************/
+=======
+/***/ "./resources/css/usuariocad.scss":
+/*!***************************************!*\
+  !*** ./resources/css/usuariocad.scss ***!
+  \***************************************/
+>>>>>>> Stashed changes
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5641,10 +5664,43 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+<<<<<<< Updated upstream
 /***/ "./resources/css/footer.scss":
 /*!***********************************!*\
   !*** ./resources/css/footer.scss ***!
   \***********************************/
+=======
+/***/ "./resources/css/admin.scss":
+/*!**********************************!*\
+  !*** ./resources/css/admin.scss ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/recuperacao.scss":
+/*!****************************************!*\
+  !*** ./resources/css/recuperacao.scss ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/pageGeneros.scss":
+/*!****************************************!*\
+  !*** ./resources/css/pageGeneros.scss ***!
+  \****************************************/
+>>>>>>> Stashed changes
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9418,12 +9474,21 @@ module.exports = axios;
 /******/ 			"css/index": 0,
 /******/ 			"css/salvador": 0,
 /******/ 			"css/dados": 0,
+<<<<<<< Updated upstream
 /******/ 			"css/footer": 0,
+=======
+>>>>>>> Stashed changes
 /******/ 			"css/pageGeneros": 0,
 /******/ 			"css/recuperacao": 0,
 /******/ 			"css/login": 0,
 /******/ 			"css/header": 0,
+<<<<<<< Updated upstream
 /******/ 			"css/admin": 0,
+=======
+/******/ 			"css/footer": 0,
+/******/ 			"css/admin": 0,
+/******/ 			"css/usuariocad": 0,
+>>>>>>> Stashed changes
 /******/ 			"css/app": 0,
 /******/ 			"css/swiper-bundle.min": 0,
 /******/ 			"css/avaliacao": 0
@@ -9476,6 +9541,7 @@ module.exports = axios;
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+<<<<<<< Updated upstream
 /******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/footer","css/pageGeneros","css/recuperacao","css/login","css/header","css/admin","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/js/app.js")))
 /******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/footer","css/pageGeneros","css/recuperacao","css/login","css/header","css/admin","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/app.scss")))
 /******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/footer","css/pageGeneros","css/recuperacao","css/login","css/header","css/admin","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/admin.scss")))
@@ -9489,6 +9555,22 @@ module.exports = axios;
 /******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/footer","css/pageGeneros","css/recuperacao","css/login","css/header","css/admin","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/avaliacao.scss")))
 /******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/footer","css/pageGeneros","css/recuperacao","css/login","css/header","css/admin","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/swiper-bundle.min.scss")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/footer","css/pageGeneros","css/recuperacao","css/login","css/header","css/admin","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/login.scss")))
+=======
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/usuariocad.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/admin.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/recuperacao.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/pageGeneros.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/footer.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/index.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/header.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/dados.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/salvador.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/avaliacao.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/swiper-bundle.min.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/index","css/salvador","css/dados","css/pageGeneros","css/recuperacao","css/login","css/header","css/footer","css/admin","css/usuariocad","css/app","css/swiper-bundle.min","css/avaliacao"], () => (__webpack_require__("./resources/css/login.scss")))
+>>>>>>> Stashed changes
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
