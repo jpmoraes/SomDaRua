@@ -67,13 +67,13 @@ class empresarioController extends Controller
         $showRedeSocial = RedeSocial::orderBy('id', 'asc')->get();
         $showEmailEmpresario = EmailEmpresario::orderBy('id', 'asc')->get();
 
-        return view("admin.show")->with('data', [
+        return view("admin.show")->with('data', [ 
             'showEmpresario'=> $showEmpresario,
             'showEnderecoEmpresario'=> $showEnderecoEmpresario,
             'showTelefoneEmpresario'=> $showTelefoneEmpresario,
             'showRedeSocial'=> $showRedeSocial,
             'showEmailEmpresario'=> $showEmailEmpresario,
-        ]);
+        ]); //TODO botar view de dados de admin
     }
     public function update(Request $request, $id)
     {
@@ -106,6 +106,6 @@ class empresarioController extends Controller
 
         $updateEmpresario->save();
 
-        return redirect("/index");
+        return redirect("/dashboard");
     }
 }
