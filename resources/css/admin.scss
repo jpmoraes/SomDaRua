@@ -1,12 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #055ba6;
+}
+
 // INICIO DO CSS DO FORM
 
 .container2 {
     width: 90%;
     max-width: 600px;
     margin: 40px auto;
-    background-color: rgba(5, 91, 166, .9);
+    background-color: rgba(5, 91, 166, 0.9);
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,7 +95,7 @@ textarea {
 }
 
 button[type="submit"] {
-    background-color: #F2A007;
+    background-color: #f2a007;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -91,7 +107,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #F2A007;
+    background-color: #f2a007;
 }
 
 .modal-content {
@@ -163,14 +179,13 @@ button[type="submit"]:hover {
 .datetime-container {
     display: flex;
     gap: 15px;
-  }
-  
-  .datetime-container input[type="date"],
-  .datetime-container input[type="time"] 
-  {
+}
+
+.datetime-container input[type="date"],
+.datetime-container input[type="time"] {
     flex: 1;
-  }
-  .input-group {
+}
+.input-group {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -180,38 +195,24 @@ button[type="submit"]:hover {
     flex: 1;
     margin-right: 5px;
 }
-#eventName, #eventDate, #eventTime, #eventLocation, #radio-group {
+#eventName,
+#eventDate,
+#eventTime,
+#eventLocation,
+#radio-group {
     display: block !important;
 }
-.socialMedia{
+.socialMedia {
     margin-top: 10px;
 }
-.caixa{
+.caixa {
     display: flex !important;
     margin: 0 10px;
     justify-content: space-between;
-
 }
 // FINAL DO CSS DO FORM
 
-
 // INICIO DO HEADER
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-
-body{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: #055BA6;
-}
-
 .header2 {
     width: 100%;
     height: 20%;
@@ -220,7 +221,10 @@ body{
     justify-content: center;
     flex-direction: column;
     color: whitesmoke;
-    background-color:  #F2A007;
+    background-color: #f2a007;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
 }
 
 .img_topo img {
@@ -228,13 +232,13 @@ body{
     margin-top: 10px;
 }
 
-.menu-hamburger{
+.menu-hamburger {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.menu-hamburguer-elements{
+.menu-hamburguer-elements {
     display: flex;
     width: 80%;
     height: 10vh;
@@ -242,7 +246,7 @@ body{
     align-items: center;
 }
 
-.menu-hamburguer-elements li{
+.menu-hamburguer-elements li {
     list-style: none;
     font-size: 1.4rem;
     margin: 2rem 0;
@@ -250,19 +254,18 @@ body{
     list-style: none;
 }
 
-.menu-hamburguer-elements a{
+.menu-hamburguer-elements a {
     color: white;
     text-decoration: none;
 }
 
-.menu-hamburguer-elements a:hover{
-    color: rgba(20,20,20,.8)
+.menu-hamburguer-elements a:hover {
+    color: rgba(20, 20, 20, 0.8);
 }
-
 
 /* BOTÃO MENU HAMBURGUER */
 .menu {
-    background-color: #055BA6;
+    background-color: #055ba6;
     width: 60px;
     height: 60px;
     margin: 1rem 1rem;
@@ -270,7 +273,7 @@ body{
     cursor: pointer;
     display: none;
 }
-  
+
 .hamburguer {
     position: relative;
     display: block;
@@ -281,26 +284,26 @@ body{
     left: 15px;
     transition: 0.5s ease-in-out;
 }
-  
+
 .hamburguer:before,
 .hamburguer:after {
     background: #ffff;
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 100%;
     position: absolute;
     transition: 0.5s ease-in-out;
 }
-  
+
 .hamburguer:before {
     top: -10px;
 }
-  
+
 .hamburguer:after {
     bottom: -10px;
 }
-  
+
 input {
     display: none;
 }
@@ -314,66 +317,63 @@ input:checked ~ label .hamburguer:before {
     transform: rotate(90deg);
     top: 0;
 }
-  
+
 input:checked ~ label .hamburguer:after {
     transform: rotate(90deg);
     bottom: 0;
 }
 
-input:checked ~ .menu-hamburguer-elements{
+input:checked ~ .menu-hamburguer-elements {
     left: 0;
 }
 
 /* ATIVANDO O BOTÃO HAMBURGUER QUANDO O TAMANHO DA TELA ATINGIR 600PX */
-@media (max-width: 600px){
-    
-    header{
+@media (max-width: 600px) {
+    header {
         height: 20%;
     }
 
-    .menu-hamburguer-elements a:hover{
+    .menu-hamburguer-elements a:hover {
         color: rgb(35, 35, 35);
     }
-    
-    .menu-hamburger{
+
+    .menu-hamburger {
         display: flex;
         width: auto;
         flex-direction: column;
         align-self: flex-start;
         overflow: auto;
         z-index: 1;
-        color: white
+        color: white;
     }
 
-    .menu-hamburguer-elements{
+    .menu-hamburguer-elements {
         width: 60%;
         height: 100%;
         background-color: #f2a007d0;
         position: fixed;
         left: -60%;
         top: 0;
-    
-        transition: left cubic-bezier(1,0,0,1) .8s;
-        
+
+        transition: left cubic-bezier(1, 0, 0, 1) 0.8s;
+
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-    
+
         padding-top: 15vh;
-    
+
         z-index: -1;
     }
 
-    .menu{
+    .menu {
         display: flex;
         height: 60px;
         width: 60px;
     }
-
 }
 //FINAL DO HEADER
-
 
 //INICIO DO PAGE ADMIN
 
@@ -381,47 +381,47 @@ input:checked ~ .menu-hamburguer-elements{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
-    background-color: #055BA6;
+    background-color: #055ba6;
     color: #fff;
-  }
-  
-  .butaoform {
-    background-color: #F2A007;
+}
+
+.butaoform {
+    background-color: #f2a007;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-  }
-  .container {
+}
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  .text-center {
+}
+
+.text-center {
     text-align: center;
-  }
-  
-  .filter-container {
+}
+
+.filter-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 20px;
     padding: 0 20px;
-  }
-  
-  .row-cols-1 {
+}
+
+.row-cols-1 {
     flex-wrap: wrap;
     margin-top: -10px;
-  }
-  
-  .card {
+}
+
+.card {
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
@@ -431,10 +431,10 @@ input:checked ~ .menu-hamburguer-elements{
     justify-content: center;
     align-items: center;
     color: #000;
-  }
-  
-  .custom-btn {
-    background-color: #055BA6;
+}
+
+.custom-btn {
+    background-color: #055ba6;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -445,13 +445,51 @@ input:checked ~ .menu-hamburguer-elements{
     align-items: center;
     font-size: 50px;
     transition: background-color 0.3s ease;
-  }
-  
-  .custom-btn:hover {
+}
+
+.custom-btn:hover {
     background-color: #3487d3;
-  }
-  
-  .custom-btn:active {
+}
+
+.custom-btn:active {
     background-color: #000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
+}
+
+//CADASTRO DO USUARIO
+
+* {
+    justify-content: center;
+}
+.paineladm{
+    margin-top: 350px;
+}
+.input-group2 {
+    row-gap: 50px;
+    text-align: center;
+}
+
+.usuario {
+    width: 300px;
+    height: 40px;
+}
+
+.input-group2 input {
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.btnpronto {
+    align-items: center;
+    justify-content: center;
+}
+.form-containe input {
+    row-gap: 20px;
+    gap: 20px;
+}
+
+.botaodiv {
+    display: flex;
+}
+// CSS FORMULÁRIO USUARIO

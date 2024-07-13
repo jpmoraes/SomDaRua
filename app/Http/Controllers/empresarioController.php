@@ -109,3 +109,10 @@ class empresarioController extends Controller
         return redirect("/dashboard");
     }
 }
+    public function index(){
+        return view('admin.index');
+    }
+    public function pageCadastro(){
+        return view('admin.usuarioCad');
+    }
+}

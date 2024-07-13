@@ -8,14 +8,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+       
+    <link rel="stylesheet" href="../../css/dados.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio</title>
-    <link rel="stylesheet" href={{$css}}>
+
+    <link rel="stylesheet" href="{{ asset($css)}}">
 </head>
-
-<body>
-
-    <header class="header2">
+<header class="header2">
         <nav class="menu-hamburger">
 
             <input id="menu-hamburguer" type="checkbox" />
@@ -28,7 +28,7 @@
             <ul class="menu-hamburguer-elements show">
 
                 <div class="img_topo">
-                    <img src="jpg/das3.png" alt="Descrição da imagem">
+                    <img src="{{asset("assets/img/som_rua.png") }}" alt="Descrição da imagem">
                 </div>
 
                 <li>
@@ -45,7 +45,12 @@
         </nav>
     </header>
 
-    {{$slot}}
+<body>
+
+    
+
+        {{$slot}}
+    
 
    
 </body>

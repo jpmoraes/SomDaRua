@@ -3,13 +3,14 @@
 use App\Http\Controllers\email_empresarioController;
 use App\Http\Controllers\empresarioController;
 use App\Http\Controllers\endereco_EnderecoEmpresarioController;
+use App\Http\Controllers\empresarioController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\saibamaisController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\pageGenerosController;
-use App\Http\Controllers\rede_socialController;
-use App\Http\Controllers\telefone_empresarioController;
 use Illuminate\Support\Facades\Route;
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -35,6 +36,7 @@ Route::get('/admin/store', [empresarioController::class, 'store'])->name('admin.
 Route::put('/admin/update', [empresarioController::class,'update'])->name('admin.update');
 
 
+Route::get('/usuario/cadastro', [empresarioController::class,'pageCadastro']);
 
 
 require __DIR__.'/auth.php';
