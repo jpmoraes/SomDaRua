@@ -102,10 +102,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #ffffff;
-}
-
 .menu {
   background: #F2A007;
   border-radius: 50%;
@@ -125,9 +121,6 @@ body {
   }
 }
 
-/* .menu:hover {
-    box-shadow: 0 0 0 8px #F2A007, 0 0 0 8px #F2A007;
-} */
 .hamburguer {
   position: relative;
   display: block;
@@ -230,7 +223,7 @@ a {
 
 .btn-success {
   background-color: rgb(3, 115, 42) !important;
-  border-radius: 50px !important;
+  border-radius: 50px;
   margin-bottom: 15px;
   position: relative;
 }

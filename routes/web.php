@@ -25,7 +25,6 @@ Route::get('/saibamais', [saibamaisController::class,'index']);
 Route::get('/generos', [pageGenerosController::class,'index']);
 
 
-
 Route::get('/admin/store', [empresarioController::class, 'store'])->name('admin.store');
 
 Route::put('/admin/update', [empresarioController::class,'update'])->name('admin.update');
