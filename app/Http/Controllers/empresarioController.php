@@ -8,6 +8,7 @@ use App\Models\Empresario;
 use App\Models\EnderecoEmpresario;
 use App\Models\RedeSocial;
 use App\Models\TelefoneEmpresario;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class empresarioController extends Controller
@@ -32,6 +33,8 @@ class empresarioController extends Controller
 
         $empresario->cpf = $cpf;
         $empresario->nome = $nome;
+     
+        $empresario->save();
 
         $endereco_empresario = new EnderecoEmpresario();
         $endereco_empresario->rua = $rua;
@@ -39,26 +42,33 @@ class empresarioController extends Controller
         $endereco_empresario->complemento = $complemento;
         $endereco_empresario->cep = $cep;    
         $endereco_empresario->numero = $numero;
+        $endereco_empresario->empresario_cpf = $cpf;
+
+        $endereco_empresario->save();
+        
 
 
         $telefone_empresario = new TelefoneEmpresario();
         $telefone_empresario->telefone = $telefone;
+        $telefone_empresario->empresario_cpf = $cpf;
 
         $rede_social = new RedeSocial();
 
         $rede_social->url = $url;
 
+        $rede_social->save();
 
         $email_empresario = new EmailEmpresario();
-        
         $email_empresario->email = $email;
+        $email_empresario->empresario_cpf = $cpf;
 
+        $email_empresario->save();
 
-
-        $empresario->save();
+    
         
         return view("admin.index")->with('data', $data);
     }
+
     public function show(Request $request)
     {
         $showEmpresario = Empresario::orderBy('id', 'asc')->get();
@@ -73,17 +83,18 @@ class empresarioController extends Controller
             'showTelefoneEmpresario'=> $showTelefoneEmpresario,
             'showRedeSocial'=> $showRedeSocial,
             'showEmailEmpresario'=> $showEmailEmpresario,
-        ]); //TODO botar view de dados de admin
+        ]);
     }
     public function update(Request $request, $id)
     {
-        $updateEmpresario = Empresario::findOrFail($id);
+        $updateEmpresario = Empresario::where('cpf', $id)->get(); //TODO modificar 
 
         $updateEmpresario->cpf = $request->novo_cpf;
         $updateEmpresario->nome = $request->novo_nome;
 
+        $updateEmpresario->save();
 
-        $updateEnderecoEmpresario = EnderecoEmpresario::findOrFail($id);
+        $updateEnderecoEmpresario = EnderecoEmpresario::findOrFail($id); //TODO modificar
 
         $updateEnderecoEmpresario->rua = $request->novo_rua;
         $updateEnderecoEmpresario->bairro = $request->novo_bairro;
@@ -91,20 +102,20 @@ class empresarioController extends Controller
         $updateEnderecoEmpresario->cep = $request->novo_cep;
         $updateEnderecoEmpresario->numero = $request->novo_numero;
 
+        $updateEnderecoEmpresario->save();
 
-        $updateTelefoneEmpresario = TelefoneEmpresario::findOrFail($id);
+        $updateTelefoneEmpresario = TelefoneEmpresario::findOrFail($id); //TODO modificar
 
         $updateTelefoneEmpresario->telefone = $request->novo_telefone;
 
+        $updateTelefoneEmpresario->save();
 
-        $updateRedeSocial = RedeSocial::findOrFail($id);
+        $updateRedeSocial = RedeSocial::findOrFail($id); //TODO modificar
 
         $updateRedeSocial->url = $request->novo_url;
 
         $updateEmpresario->email = $request->novo_email;
 
-
-        $updateEmpresario->save();
 
         return redirect("/dashboard");
     }

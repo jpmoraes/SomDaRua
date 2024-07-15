@@ -59,8 +59,8 @@
             </header>
             <form action="/submit-form" method="POST" enctype="multipart/form-data" style="max-width: 270px;">
               <div class="form-group">
-                <label for="eventName">Nome do evento/banda</label>
-                <input type="text" id="eventName" name="eventName" required>
+                <label for="eventName">Nome do evento</label>
+                <input type="text" id="eventName" name="nomeEvento" required>
               </div>
               <div class="form-group">
                 <label class="socialMedia"for="socialMedia">Banda ou Cantor / Gênero musical</label>
@@ -79,8 +79,8 @@
               <div class="form-group">
                 <label for="eventDate">Data e Horário do evento</label>
                 <div class="datetime-container">
-                  <input type="date" id="eventDate" name="eventDate" required>
-                  <input type="time" id="eventTime" name="eventTime" required>
+                  <input type="date" id="eventDate" name="dataEvento" required>
+                  <input type="time" id="eventTime" name="horaEvento" required style="text-align: center;">
                 </div>
               </div>
               <div class="form-group">
@@ -89,7 +89,7 @@
               </div>
               <div class="form-group">
                 <label for="eventDescription">Descrição do Evento</label>
-                <textarea id="eventDescription" style="resize: vertical" name="eventDescription" required></textarea>
+                <textarea id="eventDescription" style="resize: vertical" name="eventoDescricao" required></textarea>
               </div>
               <div class="radio-group">
                 Terá Couvert?
@@ -99,7 +99,7 @@
               <input type="text" id="valor" style="display: none;" placeholder="Digite o valor">
               <div id="soundInput" style="display: none;">
                 <label for="soundDetails"> Adicione o valor do couvert a ser pago </label>
-                <input type="text" id="soundDetails" name="soundDetails">
+                <input type="text" id="soundDetails" name="soundDetails" name="valorCouvert" value="0">
               </div>
               <button type="submit">Enviar</button>
               </div>

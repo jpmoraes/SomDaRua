@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Atracao;
 use App\Models\Evento;
 use Illuminate\Http\Request;
 
@@ -12,11 +13,12 @@ class eventoController extends Controller
     {
         $data = $request->all();
 
-        $nome = $data["nome"];
-        $data = $data["data"];
-        $hora = $data["hora"];
-        $valor_couvert = $data["valor_couvert"];
-        $descricao = $data["descricao"];
+        $nome = $data["nomeEvento"];
+        $data = $data["dataEvento"];
+        $hora = $data["horaEvento"];
+        $valor_couvert = $data["valorCouvert"];
+        $descricao = $data["eventoDescricao"];
+        $nome_atracao = $data["nome_atracao"];
         
 
         $evento = new Evento();
@@ -25,20 +27,30 @@ class eventoController extends Controller
         $evento->hora = $hora;
         $evento->valor_couvert = $valor_couvert;
         $evento->descricao = $descricao;
-
-        $evento->save();
         
-        return view("/");//TODO ajustar retorno
+        $evento->save();
+
+
+        $atracao = new Atracao();
+        $atracao->nome = $nome_atracao;
+        $idEvento = Evento::orderBy('id', 'desc')->first();
+        $atracao->evento_id = $idEvento;
+
+        $atracao->save();
+        
+        return view("admin.index");
     }
     public function show(Request $request)
     {
         $showEvento = Evento::orderBy('id', 'asc')->get();
 
-        return view("/"); //TODO ajustar retorno
+        $showAtracao = Atracao::orderBy('id', 'asc')->get();
+
+        return view("admin.index");
     }
     public function update(Request $request, $id)
     {
-        $updateEvento = Evento::findOrFail($id);
+        $updateEvento = Evento::findOrFail($id); //TODO modificar
 
         $updateEvento->nome = $request->novo_nome;
         $updateEvento->data = $request->novo_data;
@@ -48,14 +60,23 @@ class eventoController extends Controller
 
         $updateEvento->save();
 
-        return redirect("/"); //TODO ajustar retorno
-    }
-    public function delete(Request $request, $id)
-    {
+        $updateAtracao = Atracao::findOrFail($id); //TODO modificar
+        
+        $updateAtracao->nome = $request->novo_nome_atracao;
 
-        $deleteEvento = Evento::findOrFail($id);
-        $deleteEvento->delete();
+        $updateAtracao->save();
 
-        return redirect('/'); //TODO ajustar retorno
+        return redirect("/dashboard");
     }
+    // public function delete(Request $request, $id)
+    // {
+
+    //     $deleteEvento = Evento::findOrFail($id);
+    //     $deleteEvento->delete();
+
+    //     $deleteAtracao = Atracao::findOrFail($id);
+    //     $deleteAtracao->delete();
+
+    //     return redirect('/');
+    // }
 }
