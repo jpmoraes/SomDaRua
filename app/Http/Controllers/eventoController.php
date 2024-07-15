@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Atracao;
+use App\Models\Avaliacao;
+use App\Models\Empresario;
 use App\Models\Evento;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class eventoController extends Controller
 {
@@ -27,18 +31,20 @@ class eventoController extends Controller
         $evento->hora = $hora;
         $evento->valor_couvert = $valor_couvert;
         $evento->descricao = $descricao;
-        
+
         $evento->save();
 
+        //Criação do link de avaliação
+        $evento_id = Evento::orderBy('id_evento', 'desc')->first();
+        $url = env('APP_URL', 'http://localhost');
+        $link = $url . '/avaliacao/' . $evento_id;
 
-        $atracao = new Atracao();
-        $atracao->nome = $nome_atracao;
-        $idEvento = Evento::orderBy('id', 'desc')->first();
-        $atracao->evento_id = $idEvento;
+        $avaliacao = new Avaliacao();
+        $avaliacao->link_avaliacao = $link;
+        $avaliacao->evento_id = $evento_id;
+        $avaliacao->save();
 
-        $atracao->save();
-        
-        return view("admin.index");
+        return view("/");//TODO ajustar retorno
     }
     public function show(Request $request)
     {
@@ -79,4 +85,15 @@ class eventoController extends Controller
 
     //     return redirect('/');
     // }
+    
+    public function getQrcode(Request $request){
+        $id = $request['id'];
+        $link = Avaliacao::where('id_avaliacao', $id)->get('link_avaliacao')[0]['link_avaliacao'];
+
+        $qrcode = ['qrcode' => Qrcode::size(120)->generate($link),
+                    'link' => $link];
+
+        return view('admin.qrcode')->with('qrcode', $qrcode);
+    }
+
 }

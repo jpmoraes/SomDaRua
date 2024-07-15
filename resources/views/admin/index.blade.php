@@ -91,6 +91,21 @@
                 <label for="eventDescription">Descrição do Evento</label>
                 <textarea id="eventDescription" style="resize: vertical" name="eventoDescricao" required></textarea>
               </div>
+              <div class="form-group">
+                <label for="generoMusicalSelect">Selecione o gênero musical do evento</label>
+                <select id="generoMusicalSelect" name="generoMusical" required>
+                  <option value="" disabled selected hidden></option>
+                  <option value="Eletrônica">Eletrônica</option>
+                  <option value="Rock">Rock</option>
+                  <option value="Samba">Samba</option>
+                  <option value="MPB">MPB</option>
+                  <option value="Rap/trap">Rap/trap</option>
+                  <option value="Forró/sertanejo">Forró/sertanejo</option>
+                  <option value="Axé/pagode">Axé/pagode</option>
+                  <option value="Jazz">Jazz</option>
+                  <option value="Reggae">Reggae</option>
+                </select>
+              </div>
               <div class="radio-group">
                 Terá Couvert?
                 <label><input class="caixa" type="radio" name="couvert" value="SIM" onclick="showInput()"> SIM </label> 

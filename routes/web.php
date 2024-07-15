@@ -24,6 +24,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/admin/evento/store', [eventoController::class,'store'])->name('admin.store');
     Route::post('/admin/evento/update', [eventoController::class,'update'])->name('admin.update');
+    Route::get('/qrcode', [eventoController::class, 'getQrcode']);
+
 });
 
 Route::get('/', [homeController::class,'index']);

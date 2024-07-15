@@ -12,12 +12,13 @@ class notaController extends Controller {
     }
 
     public function store(Request $request){
+
         $nota = new Nota();
         $nota->notas = $request["notas"];
         $nota->avaliacao_id_avaliacao = substr(parse_url($_SERVER['REQUEST_URI'])["path"], 11);
 
         $nota->save();
-        return view("avaliacao.sucesso")->with("success","");
+        return view("avaliacao.sucesso");
     }
 
 }
