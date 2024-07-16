@@ -5,22 +5,25 @@ body{
     padding: 0px;
 }
 .headerSom{
+    margin-top: 20px;
     grid-area: headerSom;
-    background-color: #000000;
+    background: rgba(5, 91, 166, 0);
     font-family: 'Thunderhouse Pro';
     font-size: 20px;
     display: flex;
     justify-content: center;
+    width: 100%;
+    top: 0px;
 }
 @media (max-width: 991px) {
     .headerSom{
         height: 90px;
     }
 }
+
 .bg-body-tertiary{
     background-color: rgba(0, 0, 0, 0) !important;
 }
-
 
 .nav-link{
     color: #fff;
@@ -71,26 +74,22 @@ body{
         margin-top: 4px;
         margin-left: 10px;
     }
+    .offcanvas-header, .offcanvas-body{
+        background-color:  rgb(5, 91, 166);
+    }
+    
 }
 
-.offcanvas-header, .offcanvas-body{
-    background-color: #000000;
-    backdrop-filter: blur(50px);
-}
 
 .navbar-toggler{
     border: none;
     font-size: 1.25rem;
-    color: #fff;
+    color: #c86161;
 }
 
 .navbar-toggler:focus, .btn-close:focus{
     box-shadow: none;
     outline: none;
-}
-
-header{
-    margin: 10px;
 }
 
 .login-button{

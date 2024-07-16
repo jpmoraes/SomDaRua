@@ -32,53 +32,15 @@ let contadorCampos = 1;
                 novoCampoInput.ariaLabel = "First name";
                 novoCampoInput.className = "form-control";
                 novoCampoInput.style = "flex: 1; margin-right:5px;";
-                
-                const novoCampoSelect = document.createElement("select");
-                novoCampoSelect.id = "generoMusical" + contadorCampos;
-                novoCampoSelect.name = "generoMusical";
-                novoCampoSelect.className = "form-control";
-                novoCampoSelect.style = "flex: 1;";
-                
+
                 const optionPlaceholder = document.createElement("option");
                 optionPlaceholder.value = "";
                 optionPlaceholder.disabled = true;
                 optionPlaceholder.selected = true;
                 optionPlaceholder.hidden = true;
                 optionPlaceholder.textContent = "";
-                
-                const optionFacebook = document.createElement("option");
-                optionFacebook.value = "face";
-                optionFacebook.textContent = "Facebook";
-                
-                const optionTiktok = document.createElement("option");
-                optionTiktok.value = "Tiktok";
-                optionTiktok.textContent = "Tiktok";
-                
-                const optionInstagram = document.createElement("option");
-                optionInstagram.value = "Instagram";
-                optionInstagram.textContent = "Instagram";
-                
-                const optionKwai = document.createElement("option");
-                optionKwai.value = "Kwai";
-                optionKwai.textContent = "Kwai";
-                
-                const optionTwitter = document.createElement("option");
-                optionTwitter.value = "X";
-                optionTwitter.textContent = "X/Twitter";
-                
-                const optionYoutube = document.createElement("option");
-                optionYoutube.value = "youtube";
-                optionYoutube.textContent = "Youtube";
-                
-                novoCampoSelect.appendChild(optionPlaceholder);
-                novoCampoSelect.appendChild(optionFacebook);
-                novoCampoSelect.appendChild(optionTiktok);
-                novoCampoSelect.appendChild(optionInstagram);
-                novoCampoSelect.appendChild(optionKwai);
-                novoCampoSelect.appendChild(optionTwitter);
-                novoCampoSelect.appendChild(optionYoutube);
-                
-                novoCampoDiv.appendChild(novoCampoInput);
+
+                  novoCampoDiv.appendChild(novoCampoInput);
               
                 
                 const socialMediaContainer = document.getElementById("socialMediaContainer");
