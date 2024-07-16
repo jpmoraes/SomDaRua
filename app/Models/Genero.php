@@ -2,16 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Genero extends Model
 {
-    use HasFactory;
+    protected $table = 'evento';
 
-    public function evento()
+    public function generos()
     {
-        return $this->belongsToMany(Evento::class, 'genero_evento', 'generos_id', 'evento_id');
+        return $this->belongsToMany(Genero::class, 'genero_evento', 'evento_id', 'genero_id')
+                    ->using(GeneroEvento::class);
     }
-
 }

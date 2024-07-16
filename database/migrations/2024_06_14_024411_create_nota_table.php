@@ -10,10 +10,10 @@ class CreateNotaTable extends Migration
         Schema::create('nota', function (Blueprint $table) {
             $table->id();
             $table->integer('notas')->nullable();
-            $table->unsignedBigInteger('avaliacao_id_avaliacao');
+            $table->unsignedBigInteger('id_avaliacao');
             $table->timestamps();
 
-            $table->foreign('avaliacao_id_avaliacao')->references('id_avaliacao')->on('avaliacao')->onDelete('cascade');
+            $table->foreign('id_avaliacao')->references('id_avaliacao')->on('avaliacao')->onDelete('cascade');
         });
     }
 

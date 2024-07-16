@@ -7,66 +7,56 @@ use App\Models\EmailEmpresario;
 use App\Models\Empresario;
 use App\Models\EnderecoEmpresario;
 use App\Models\RedeSocial;
+use App\Models\Secao;
 use App\Models\TelefoneEmpresario;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class empresarioController extends Controller
 {
+
+    public function index(){
+        return view('admin.index');
+    }
+    public function create(){
+        return view('admin.formEmpresario');
+    }
+
     public function store(Request $request)
     {
+        $idSessao = Session::getId();
+        $idCredencial = Secao::findOrFail($idSessao)->get('user_id')[0]['user_id'];
+
         $data = $request->all();
-
         $cpf = $data["cpf"];
-        $nome = $data["nome"];
-        $rua = $data["rua"];
-        $bairro = $data["bairro"];
-        $complemento = $data["complemento"];
-        $cep = $data["cep"];
-        $numero = $data["numero"];
-        $telefone = $data["telefone"]; 
-        $url = $data["url"];
-        $email = $data["email"];
 
-    
         $empresario = new Empresario();
-
         $empresario->cpf = $cpf;
-        $empresario->nome = $nome;
-     
+        $empresario->nome = $data["nome"]; 
+        $empresario->credenciais_id = $idCredencial;   
         $empresario->save();
 
         $endereco_empresario = new EnderecoEmpresario();
-        $endereco_empresario->rua = $rua;
-        $endereco_empresario->bairro = $bairro; 
-        $endereco_empresario->complemento = $complemento;
-        $endereco_empresario->cep = $cep;    
-        $endereco_empresario->numero = $numero;
+        $endereco_empresario->rua = $data["rua"];
+        $endereco_empresario->bairro = $data["bairro"]; 
+        $endereco_empresario->complemento = $data["complemento"];
+        $endereco_empresario->cep = $data["cep"];    
+        $endereco_empresario->numero = $data["numero"];
         $endereco_empresario->empresario_cpf = $cpf;
-
         $endereco_empresario->save();
         
-
-
         $telefone_empresario = new TelefoneEmpresario();
-        $telefone_empresario->telefone = $telefone;
+        $telefone_empresario->telefone = $data["telefone"];
         $telefone_empresario->empresario_cpf = $cpf;
-
-        $rede_social = new RedeSocial();
-
-        $rede_social->url = $url;
-
-        $rede_social->save();
+        $telefone_empresario->save();
 
         $email_empresario = new EmailEmpresario();
-        $email_empresario->email = $email;
+        $email_empresario->email = $data["email"];
         $email_empresario->empresario_cpf = $cpf;
-
         $email_empresario->save();
 
-    
-        
-        return view("admin.index")->with('data', $data);
+        return redirect("dashboard"); //TODO ajustar retorno
     }
 
     public function show(Request $request)
@@ -120,10 +110,5 @@ class empresarioController extends Controller
         return redirect("/dashboard");
     }
 
-    public function index(){
-        return view('admin.index');
-    }
-    public function pageCadastro(){
-        return view('admin.usuarioCad');
-    }
+
 }

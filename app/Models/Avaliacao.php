@@ -18,7 +18,7 @@ class Avaliacao extends Model
 
     public function nota()
     {
-        return $this->hasMany(Nota::class, 'avaliacao_id_avaliacao', 'id_avaliacao');
+        return $this->hasMany(Nota::class, 'id_avaliacao', 'id_avaliacao');
     }
 
 }

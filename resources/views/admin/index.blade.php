@@ -57,7 +57,8 @@
             <header >
               <h2>Preencha as informações do seu evento</h2>
             </header>
-            <form action="/submit-form" method="POST" enctype="multipart/form-data" style="max-width: 270px;">
+            <form action="" method="POST" enctype="multipart/form-data" style="max-width: 270px;">
+              @csrf
               <div class="form-group">
                 <label for="eventName">Nome do evento</label>
                 <input type="text" id="eventName" name="nomeEvento" required>

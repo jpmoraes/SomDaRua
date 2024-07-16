@@ -12,7 +12,7 @@ class Nota extends Model
 
     public function avaliacao()
     {
-        return $this->belongsTo(Avaliacao::class, 'avaliacao_id_avaliacao', 'id_avaliacao');
+        return $this->belongsTo(Avaliacao::class, 'id_avaliacao', 'id_avaliacao');
     }
 
 }
