@@ -479,3 +479,24 @@ body {
     display: flex;
 }
 // CSS FORMULÁRIO USUARIO
+
+
+//CSS cardEvento.blade.php
+#icardEvento, #icardli{
+    background-color: #0c015622 !important;
+}
+
+#icardTitle{
+    display: flex;
+    font-family: 'Thunderhouse Pro';
+    font-size: 35px;
+    justify-content: center;
+    color: white;
+}
+
+#icardli {   
+    display: flex;
+    font-family: 'Thunderhouse Pro';
+    font-size: 25px;
+    color: white;
+}

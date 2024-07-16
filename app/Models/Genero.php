@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Genero extends Model
 {
-    protected $table = 'evento';
+    protected $table = 'genero';
 
     public function generos()
     {

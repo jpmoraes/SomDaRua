@@ -459,3 +459,22 @@ body {
 .botaodiv {
   display: flex;
 }
+
+#icardEvento, #icardli {
+  background-color: rgba(12, 1, 86, 0.1333333333) !important;
+}
+
+#icardTitle {
+  display: flex;
+  font-family: "Thunderhouse Pro";
+  font-size: 35px;
+  justify-content: center;
+  color: white;
+}
+
+#icardli {
+  display: flex;
+  font-family: "Thunderhouse Pro";
+  font-size: 25px;
+  color: white;
+}
