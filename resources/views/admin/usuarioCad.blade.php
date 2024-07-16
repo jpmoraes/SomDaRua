@@ -1,6 +1,5 @@
 <x-layoutAdm css="css/admin.css">
 
-
         <div class="paineladm home">
             <p>Meus Dados</p>
     

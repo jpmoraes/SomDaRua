@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<x-layoutLogin css="css/login.css">
     
-    <link rel="stylesheet" href="{{asset('css/login.css')}}">
-    <title>Autenticação</title>
-</head>
 
-<body>
     <div class="container" id="container">
         <div class="form-container sign-up">
             <form method="POST" action="{{ route('register') }}">
@@ -86,6 +76,5 @@
     </div>
 
     <script src="{{asset('js/login.js')}}"></script>
-</body>
 
-</html>
+</x-layoutLogin>

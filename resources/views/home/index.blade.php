@@ -31,7 +31,7 @@
       </div>
     </section>
 
-    <section class="agenda">
+    <section class="agenda" id="agenda">
       <h1>Agenda</h1>
       <div class="container-agenda">
       <div class="card" style="width: 18rem;">
@@ -241,7 +241,7 @@
     </a>
   </section>
 
-    <section class="sobreNos">
+    <section class="sobreNos" id="sobreNos">
         <h1>Sobre Nós</h1>
         <p>
           <strong>“Som da Rua”</strong> é muito mais do que uma empresa de eventos; é uma ponte entre a energia
