@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class EmailEmpresario extends Model
 {
     use HasFactory;
+    protected $table = 'email_empresario';
 
     public function empresario()
     {

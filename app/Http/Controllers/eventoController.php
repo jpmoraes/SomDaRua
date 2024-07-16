@@ -7,35 +7,44 @@ use App\Models\Atracao;
 use App\Models\Avaliacao;
 use App\Models\Empresario;
 use App\Models\Evento;
+use App\Models\GeneroEvento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class eventoController extends Controller
 {
+
+    public function create(){
+        return view('admin.formEvento');
+    }
+
     public function store(Request $request)
     {
-        $data = $request->all();
-
-        $nome = $data["nomeEvento"];
-        $data = $data["dataEvento"];
-        $hora = $data["horaEvento"];
-        $valor_couvert = $data["valorCouvert"];
-        $descricao = $data["eventoDescricao"];
-        $nome_atracao = $data["nome_atracao"];
-        
+        $data = $request->all();        
 
         $evento = new Evento();
-        $evento->nome = $nome;
-        $evento->data = $data;
-        $evento->hora = $hora;
-        $evento->valor_couvert = $valor_couvert;
-        $evento->descricao = $descricao;
-
+        $evento->nome = $data['nome'];
+        $evento->data = $data['data'];
+        $evento->hora = $data['hora'];
+        $evento->valor_couvert = $data['valor_couvert'];
+        $evento->descricao = $data['descricao'];
+        $evento->estabelecimento_id = $data['estabelecimento_id'];
         $evento->save();
 
+        $evento_id = Evento::orderBy('id_evento', 'desc')->first()->id_evento;
+
+        $generoEvento = new GeneroEvento();
+        $generoEvento->evento_id = $evento_id;
+        $generoEvento->genero_id = $data['genero_id'];
+        $generoEvento->save();
+
+        $atracao = new Atracao();
+        $atracao->nome = $data['atracao'];
+        $atracao->evento_id = $evento_id;
+        $atracao->save();
+
         //Criação do link de avaliação
-        $evento_id = Evento::orderBy('id_evento', 'desc')->first();
         $url = env('APP_URL', 'http://localhost');
         $link = $url . '/avaliacao/' . $evento_id;
 
@@ -44,7 +53,7 @@ class eventoController extends Controller
         $avaliacao->evento_id = $evento_id;
         $avaliacao->save();
 
-        return view("/");//TODO ajustar retorno
+        return redirect("dashboard");//TODO ajustar retorno
     }
     public function show(Request $request)
     {
@@ -74,18 +83,7 @@ class eventoController extends Controller
 
         return redirect("/dashboard");
     }
-    // public function delete(Request $request, $id)
-    // {
 
-    //     $deleteEvento = Evento::findOrFail($id);
-    //     $deleteEvento->delete();
-
-    //     $deleteAtracao = Atracao::findOrFail($id);
-    //     $deleteAtracao->delete();
-
-    //     return redirect('/');
-    // }
-    
     public function getQrcode(Request $request){
         $id = $request['id'];
         $link = Avaliacao::where('id_avaliacao', $id)->get('link_avaliacao')[0]['link_avaliacao'];

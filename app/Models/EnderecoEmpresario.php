@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class EnderecoEmpresario extends Model
 {
     use HasFactory;
+
+    protected $table = 'endereco_empresario';
+
     public function empresario()
     {
         return $this->belongsTo(Empresario::class, 'empresario_cpf', 'cpf');
