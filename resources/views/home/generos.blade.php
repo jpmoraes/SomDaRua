@@ -29,7 +29,7 @@
                 </div>
             </label>
 
-            <ul>
+            <ul class="menuHam-lista">
                 <li><a href="#">Reggae</a></li>
                 <li><a href="#">Eletrônica</a></li>
                 <li><a href="#">Forro/Sertanejo</a></li>
@@ -131,7 +131,53 @@
         <div class="agenda-generos container">
 
             <div class="container-generos container">
+            <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Rock Paulera</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">18 de Julho</li>
+          <li class="list-group-item">Samba na Laje</li>
+          <li class="list-group-item">19h - PITUBA</li>
+        </ul>
+      </div>
 
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Rock Paulera</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">20 de Julho</li>
+          <li class="list-group-item">22H</li>
+          <li class="list-group-item">Commons Bar - RV</li>
+        </ul>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">JAM no MAM</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">21 de Julho</li>
+          <li class="list-group-item">17h</li>
+          <li class="list-group-item">AV. Contorno</li>
+        </ul>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Pagode Delas</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">25 de Julho</li>
+          <li class="list-group-item">22h</li>
+          <li class="list-group-item">2 de Julho</li>
+        </ul>
+      </div>
             </div>
         </div>
 

@@ -78,32 +78,7 @@
         </ul>
       </div>
     </div>
-
-      <
-      <!-- <div class="d-flex justify-content-center">
-        <div id="ielements">
-          <div class="scheduleItem">
-            <div class="dayNumber">18 de Julho Samba na Laje 19h PITUBA</div>
-          </div>
-
-          <div class="scheduleItem">
-            <div class="dayNumber">20 de Julho Commons Bar 22h BARRA</div>
-          </div>
-
-          <div class="scheduleItem">
-            <div class="dayNumber">21 de Julho JAM NO MAM 17H AV.CONTORONO</div>
-          </div>
-
-          <div class="scheduleItem">
-            <div class="dayNumber">25 de Julho Pagode Delas 22h 2 de JULHO</div>
-          </div>
-
-          <div class="scheduleItem">
-            <div class="dayNumber">29 de Julho 10 horas de Arrocha 15h WET'N WILD</div>
-          
-          </div>
-        </div>
-      </div> -->
+    
       <nav class="pagination-outer" aria-label="Page navigation">
         <ul class="pagination">
           <li class="page-item">

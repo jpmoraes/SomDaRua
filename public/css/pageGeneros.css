@@ -177,7 +177,7 @@ input:checked ~ label .hamburguer:after {
   bottom: 0;
 }
 
-ul {
+.menuHam-lista {
   margin-top: 50px;
   position: absolute;
   top: 60%;
@@ -186,9 +186,6 @@ ul {
   list-style: none;
   visibility: hidden;
   transition: 0.25s 0.1s cubic-bezier(0, 1.07, 0, 1.02);
-}
-
-a {
   display: block;
   margin-bottom: 20px;
   font-family: "Thunderhouse Pro";
@@ -257,6 +254,7 @@ input:checked ~ label .button-generos .button-eventos-gratuitos .btn-success {
   display: flex;
   justify-content: flex-start;
   padding-top: 80px;
+  padding-bottom: 80px;
   background-color: rgb(242, 160, 7);
   width: 100%;
 }
@@ -266,6 +264,31 @@ input:checked ~ label .button-generos .button-eventos-gratuitos .btn-success {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
+}
+
+.card-title {
+  display: flex;
+  font-family: "Thunderhouse Pro";
+  font-size: 35px;
+  justify-content: center;
+  color: white;
+}
+
+.list-group-item {
+  display: flex;
+  font-family: "Thunderhouse Pro";
+  font-size: 25px;
+  color: white;
+}
+
+/* .card-body{
+    background-color: rgba(255, 255, 255, 0) !important;
+} */
+/* .card, .bs-body-bg{
+    background-color: #0c015622 !important;
+} */
+.card, .list-group-item {
+  background-color: rgba(12, 1, 86, 0.1333333333) !important;
 }
 
 .agenda-generos img {
