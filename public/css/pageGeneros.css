@@ -257,6 +257,7 @@ input:checked ~ label .button-generos .button-eventos-gratuitos .btn-success {
   padding-bottom: 80px;
   background-color: rgb(242, 160, 7);
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .container-generos {

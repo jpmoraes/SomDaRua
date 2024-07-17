@@ -24,14 +24,14 @@ class adminController extends Controller
         $cpfEmpresario = Empresario::where('credenciais_id', $idCredencial)->get('cpf');
         $cpfEmpresarioArray = json_decode(json_encode($cpfEmpresario), true);
 
-        if($cpfEmpresario != []){
+        if($cpfEmpresarioArray === []){ //verifica se empresario existe
             return view("admin.index")->with('eventosArray', null);
         }
         
         $idEstabelecimentoArray = Estabelecimento::where('empresario_cpf', $cpfEmpresarioArray[0]['cpf'])->get('id_estabelecimento');
         $idEstabelecimentoArray = json_decode(json_encode($idEstabelecimentoArray), true);
 
-        if($idEstabelecimentoArray != []){
+        if($idEstabelecimentoArray === []){ //verifica se estabelecimento existe
             return view("admin.index")->with('eventosArray', null);
         }
 
@@ -49,7 +49,7 @@ class adminController extends Controller
         $generoArray = [];
         $i = 0;
         foreach($eventosArray as $evento){
-            $generoIdArray = GeneroEvento::where('genero_id', $evento['id_evento'])->get('genero_id');
+            $generoIdArray = GeneroEvento::where('evento_id', $evento['id_evento'])->get('genero_id');
             $generoIdArray = json_decode(json_encode($generoIdArray), true);
 
             foreach($generoIdArray as $generoId){

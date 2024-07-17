@@ -1,28 +1,6 @@
 const mix = require('laravel-mix');
 
-mix.webpackConfig({
-    module: {
-        rules: [{
-                test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env'],
-                        plugins: ['@babel/plugin-syntax-dynamic-import']
-                    }
-                }
-            }]
-    },
-    resolve: {
-        extensions: ['.js', '.json'],
-        mainFields: ['browser', 'module', 'main']
-    }
-});
-
-mix.js('resources/js/app.js', 'public/js/')
-   .sass('resources/css/app.scss', 'public/css')
-   .sass('resources/css/admin.scss', 'public/css')
+mix.sass('resources/css/admin.scss', 'public/css')
    .sass('resources/css/recuperacao.scss', 'public/css')
    .sass('resources/css/pageGeneros.scss', 'public/css')
    .sass('resources/css/footer.scss', 'public/css')
