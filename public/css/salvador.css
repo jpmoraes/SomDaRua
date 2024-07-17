@@ -1,7 +1,7 @@
-@import url(https://db.onlinewebfonts.com/c/e34e16fdcaf1b7ba681aed2f33af988c?family=Thunderhouse+W15+Medium);
+@import url(https://db.onlinewebfonts.com/c/e8fafd4bab1ff229bb62067775369b8d?family=Thunderhouse+Pro);
 @import url(https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap);
 .titulo {
-  font-family: "Thunderhouse W15 Medium";
+  font-family: "Thunderhouse Pro";
   font-size: clamp(20px, 10vw, 100px);
   color: white;
   font-style: normal;
@@ -11,21 +11,22 @@
 .texto {
   font-family: "Nunito", sans-serif;
   color: white;
-  margin: 80px;
+  margin: 20px 80px;
   text-align: justify;
-  font-size: clamp(12px, 2vw, 20px);
+  font-size: clamp(5px, 2vw, 15px);
 }
 
 .sobressa {
+  margin: 25px 20px;
   display: grid;
-  grid-template: "pelourinho" 900px "rio-vermelho" 900px "barra" 900px "gamboa" 900px/1fr;
+  grid-template: "pelourinho" 500px "rio-vermelho" 500px "barra" 500px "gamboa" 500px/1fr;
 }
 
 .pelourinho {
   text-align: center;
   justify-content: center;
   font-size: 1.5em;
-  background: #265F28;
+  background: rgba(38, 95, 40, 0.5568627451);
   align-content: center;
   color: rgb(0, 0, 0);
   display: flex;
@@ -34,7 +35,7 @@
 }
 
 .txt-pelourinho {
-  height: 900px;
+  height: 500px;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -42,7 +43,7 @@
 }
 
 .img-pelourinho {
-  height: 900px;
+  height: 500px;
   width: 100%;
   background-image: url(/images/pelourinho.png?e0ae24d88e929f9593247501dad8e1c6);
   background-size: cover;
@@ -52,7 +53,7 @@
   text-align: center;
   justify-content: center;
   font-size: 1.5em;
-  background: #4FB5FF;
+  background: rgba(79, 182, 255, 0.4745098039);
   align-content: center;
   color: rgb(0, 0, 0);
   display: flex;
@@ -61,7 +62,7 @@
 }
 
 .txt-rio-vermelho {
-  height: 900px;
+  height: 500px;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -69,7 +70,7 @@
 }
 
 .img-rio-vermelho {
-  height: 900px;
+  height: 500px;
   width: 100%;
   background-image: url(/images/rioVermelho.png?f577bd95aef2fa98042f4fd903627360);
   background-size: cover;
@@ -79,7 +80,7 @@
   text-align: center;
   justify-content: center;
   font-size: 1.5em;
-  background: #D9B700;
+  background: rgba(217, 184, 0, 0.5019607843);
   align-content: center;
   color: rgb(0, 0, 0);
   display: flex;
@@ -88,7 +89,7 @@
 }
 
 .txt-barra {
-  height: 900px;
+  height: 500px;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -96,7 +97,7 @@
 }
 
 .img-barra {
-  height: 900px;
+  height: 500px;
   width: 100%;
   background-image: url(/images/barra.png?d773bc4372639706e0e2869013d99112);
   background-size: cover;
@@ -106,7 +107,7 @@
   text-align: center;
   justify-content: center;
   font-size: 1.5em;
-  background: #F40000;
+  background: rgba(244, 0, 0, 0.4196078431);
   align-content: center;
   color: rgb(0, 0, 0);
   display: flex;
@@ -115,7 +116,7 @@
 }
 
 .txt-gamboa {
-  height: 900px;
+  height: 500px;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -123,7 +124,7 @@
 }
 
 .img-gamboa {
-  height: 900px;
+  height: 500px;
   width: 100%;
   background-image: url(/images/gamboa.png?7ee5cacb24701ef2d9f14fce35626ad9);
   background-size: cover;
