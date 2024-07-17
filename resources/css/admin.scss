@@ -406,7 +406,7 @@ body {
 }
 
 .card {
-    background-color: #fff;
+    background-color: #0c015622 !important;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 20px;
@@ -496,7 +496,9 @@ body {
     font-size: 25px;
     color: white;
 }
-
+.cardsOrg{
+display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px
+}
 //
 
 #nome {

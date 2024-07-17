@@ -388,7 +388,7 @@ body {
 }
 
 .card {
-  background-color: #fff;
+  background-color: rgba(12, 1, 86, 0.1333333333) !important;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 20px;
@@ -476,6 +476,13 @@ body {
   color: white;
 }
 
+.cardsOrg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 #nome {
   float: right;
 }
@@ -491,5 +498,5 @@ body {
 }
 
 .table th, td {
-  background-color: rgba(255, 255, 255, 0.3215686275) !important;
+  background-color: rgba(255, 255, 255, 0.3176470588) !important;
 }

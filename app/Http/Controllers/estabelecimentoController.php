@@ -16,7 +16,7 @@ class estabelecimentoController extends Controller
 {
 
     public function create() {
-        return view('admin.formEmpresario');
+        return view('admin.formEstabelecimento');
     }
 
     public function store(Request $request)

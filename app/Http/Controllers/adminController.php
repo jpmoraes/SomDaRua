@@ -28,9 +28,14 @@ class adminController extends Controller
             return view("admin.index")->with('eventosArray', null);
         }
         
-        $idEstabelecimentoArray = Estabelecimento::where('empresario_cpf', $cpfEmpresarioArray[0]['cpf'])->get('id_estabelecimento');
-        $idEstabelecimentoArray = json_decode(json_encode($idEstabelecimentoArray), true);
-
+        $estabelecimentoArray = Estabelecimento::where('empresario_cpf', $cpfEmpresarioArray[0]['cpf'])->get(['id_estabelecimento', 'nome']);
+        $estabelecimentoArray = json_decode(json_encode($estabelecimentoArray), true);
+        $idEstabelecimentoArray = [];
+        
+        foreach($estabelecimentoArray as $estabelecimento){
+            array_push($idEstabelecimentoArray, $estabelecimento['id_estabelecimento']);
+        }
+        
         if($idEstabelecimentoArray === []){ //verifica se estabelecimento existe
             return view("admin.index")->with('eventosArray', null);
         }
@@ -51,16 +56,18 @@ class adminController extends Controller
         foreach($eventosArray as $evento){
             $generoIdArray = GeneroEvento::where('evento_id', $evento['id_evento'])->get('genero_id');
             $generoIdArray = json_decode(json_encode($generoIdArray), true);
-
+            
             foreach($generoIdArray as $generoId){
                 $genero = Genero::where('id_genero', $generoId['genero_id'])->get('nome')[0]['nome'];
                 array_push($generoArray, json_decode(json_encode($genero), true));
             }
+            
             $eventosArray[$i]['genero'] = $generoArray[$i];
             $i++;
         }
 
-        return view("admin.index")->with('eventosArray', $eventosArray);
+        return view("admin.index")->with(['eventosArray' => $eventosArray,
+                                         'estabelecimentoArray' => $estabelecimentoArray]);
     }
 
 }
