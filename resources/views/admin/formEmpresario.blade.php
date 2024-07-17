@@ -1,36 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="" method="POST">
-        @csrf
-        <label for="cpf">cpf</label>
-        <input type="text" name="cpf" id="cpf">
-        <label for="nome">nome</label>
-        <input type="text" name="nome" id="nome">
-        <label for="rua">rua</label>
-        <input type="text" name="rua" id="rua">
-        <label for="bairro">bairro</label>
-        <input type="text" name="bairro" id="bairro">
-        <label for="complemento">complemento</label>
-        <input type="text" name="complemento" id="complemento">
-        <label for="cep">cep</label>
-        <input type="text" name="cep" id="cep">
-        <label for="numero">numero</label>
-        <input type="text" name="numero" id="numero">
-        <label for="telefone">telefone</label>
-        <input type="text" name="telefone" id="telefone">
-        <label for="url">url</label>
-        <input type="text" name="url" id="url">
-        <label for="email">email</label>
-        <input type="text" name="email" id="email">
-        <button type="submit">enviar</button>
+<x-layoutAdm css="css/admin.css">
 
-    </form>
+    <div class="container">
 
-</body>
-</html>
+        <div class="paineladm home">
+            <p>Meus Dados</p>
+        </div>
+
+        <form action="/admin/create" method="POST">
+            @csrf
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">CPF</label>
+                <input type="text" name="cpf" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Nome</label>
+                <input type="text" name="nome" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Rua</label>
+                <input type="text" name="rua" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Bairro</label>
+                <input type="text" name="bairro" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Complemento</label>
+                <input type="text" name="complemento" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">CEP</label>
+                <input type="text" name="cep" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Número</label>
+                <input type="text" name="numero" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Telefone</label>
+                <input type="text" name="telefone" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">URL</label>
+                <input type="text" name="url" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Email</label>
+                <input type="text" name="email" class="form-control" id="formGroupExampleInput">
+            </div>
+
+            <button type="submit">enviar</button>
+
+        </form>
+    </div>
+</x-layoutAdm>

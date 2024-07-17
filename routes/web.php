@@ -14,13 +14,13 @@ Route::get('/dashboard', [adminController::class, 'index'])->middleware(['auth',
 
 Route::middleware('auth')->group(function () {
     Route::get('/admin/create', [empresarioController::class, 'create']);
-    Route::post('/admin/create', [empresarioController::class, 'store']);
-
+    Route::post('/admin/store', [empresarioController::class, 'store']);
+    
     Route::get('/admin/estabelecimento/create', [estabelecimentoController::class, 'create']);
-    Route::post('/admin/estabelecimento/create', [estabelecimentoController::class, 'store']);
+    Route::post('/admin/estabelecimento/store', [estabelecimentoController::class, 'store']);
 
     Route::get('/admin/evento/create', [eventoController::class, 'create']);
-    Route::post('/admin/evento/create', [eventoController::class, 'store']);
+    Route::post('/admin/evento/store', [eventoController::class, 'store']);
 
     Route::get('/qrcode', [eventoController::class, 'getQrcode']);
 

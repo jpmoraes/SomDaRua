@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<x-layoutAdm css="css/admin.css">
     <form action="" method="POST">
         @csrf
         <!-- valor do estabelecimento_id -->
-        <input type="text" name="estabelecimento_id" id="estabelecimento_id" style="display: none;" value="1"> 
+        <input type="text" name="estabelecimento_id" id="estabelecimento_id" style="display: none;" value="1">
         <label for="nome">nome</label>
         <input type="text" name="nome" id="nome" value="nome">
         <label for="data">data</label>
@@ -27,5 +20,4 @@
 
         <button type="submit">enviar</button>
     </form>
-</body>
-</html>
+</x-layoutAdm>

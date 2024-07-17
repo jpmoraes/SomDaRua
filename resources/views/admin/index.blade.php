@@ -64,14 +64,15 @@
             </header>
             <form action="" method="POST" enctype="multipart/form-data" style="max-width: 270px;">
               @csrf
+              <input type="text" name="estabelecimento_id" id="estabelecimento_id" style="display: none;" value="1">
               <div class="form-group">
                 <label for="eventName">Nome do evento</label>
-                <input type="text" id="eventName" name="nomeEvento" required>
+                <input type="text" id="eventName" name="nome" required>
               </div>
               <div class="form-group">
-                <label class="socialMedia"for="socialMedia">Banda ou Cantor / Gênero musical</label>
+                <label class="socialMedia" for="socialMedia">Banda ou Cantor / Gênero musical</label>
                 <div id="socialMediaContainer">
-                  <div class="input-group" id="socialMedia1" style="display: flex; flex-direction: row; align-items: right;">
+                  <div class="input-group" id="socialMedia1" name="atracao" style="display: flex; flex-direction: row; align-items: right;">
                     <input type="text" aria-label="First name" class="form-control" style="flex: 1; margin-right:5px;" >
                     <button type="button" onclick="addNewField()" class="butaoform"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
@@ -85,8 +86,8 @@
               <div class="form-group">
                 <label for="eventDate">Data e Horário do evento</label>
                 <div class="datetime-container">
-                  <input type="date" id="eventDate" name="dataEvento" required>
-                  <input type="time" id="eventTime" name="horaEvento" required style="text-align: center;">
+                  <input type="date" id="eventDate" name="data" required>
+                  <input type="time" id="eventTime" name="hora" required style="text-align: center;">
                 </div>
               </div>
               <div class="form-group">
@@ -120,7 +121,7 @@
               <input type="text" id="valor" style="display: none;" placeholder="Digite o valor">
               <div id="soundInput" style="display: none;">
                 <label for="soundDetails"> Adicione o valor do couvert a ser pago </label>
-                <input type="text" id="soundDetails" name="soundDetails" name="valorCouvert" value="0">
+                <input type="text" id="soundDetails"  name="valor_couvert" value="0">
               </div>
               <button type="submit">Enviar</button>
               </div>
