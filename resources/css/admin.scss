@@ -476,23 +476,23 @@ body {
 }
 // CSS FORMULÁRIO USUARIO
 
-
 //CSS cardEvento.blade.php
-#icardEvento, #icardli{
+#icardEvento,
+#icardli {
     background-color: #0c015622 !important;
 }
 
-#icardTitle{
+#icardTitle {
     display: flex;
-    font-family: 'Thunderhouse Pro';
+    font-family: "Thunderhouse Pro";
     font-size: 35px;
     justify-content: center;
     color: white;
 }
 
-#icardli {   
+#icardli {
     display: flex;
-    font-family: 'Thunderhouse Pro';
+    font-family: "Thunderhouse Pro";
     font-size: 25px;
     color: white;
 }
@@ -501,4 +501,19 @@ body {
 
 #nome {
     float: right;
+}
+
+/*============PAGINA SHOW ESTABELECIMENTO======*/
+
+.topoPage {
+    display: flex;
+    flex-direction: row;
+}
+
+.topoPage button {
+    font-size: 20px;
+}
+
+.table th,td{
+    background-color: #ffffff52 !important;
 }

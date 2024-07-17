@@ -15,9 +15,13 @@ Route::get('/dashboard', [adminController::class, 'index'])->middleware(['auth',
 Route::middleware('auth')->group(function () {
     Route::get('/admin/create', [empresarioController::class, 'create']);
     Route::post('/admin/store', [empresarioController::class, 'store']);
-    
+
+
     Route::get('/admin/estabelecimento/create', [estabelecimentoController::class, 'create']);
+    Route::get('/admin/estabelecimento/show', [estabelecimentoController::class, 'show']);
     Route::post('/admin/estabelecimento/store', [estabelecimentoController::class, 'store']);
+    Route::put('/admin/estabelecimento/update', [empresarioController::class, 'update'])->name('adminEstabelecimento.update');
+    Route::delete('/estabelecimento/admin/delete/id', [empresarioController::class, 'delete'])->name('adminEstabelecimento.delete');
 
     Route::get('/admin/evento/create', [eventoController::class, 'create']);
     Route::post('/admin/evento/store', [eventoController::class, 'store']);
@@ -26,11 +30,11 @@ Route::middleware('auth')->group(function () {
 
 });
 
-Route::get('/', [homeController::class,'index']);
-Route::get('/saibamais', [saibamaisController::class,'index']);
-Route::get('/generos', [pageGenerosController::class,'index']);
+Route::get('/', [homeController::class, 'index']);
+Route::get('/saibamais', [saibamaisController::class, 'index']);
+Route::get('/generos', [pageGenerosController::class, 'index']);
 
 Route::get('/avaliacao/{id_evento}', [notaController::class, 'index']);
 Route::post('/avaliacao/{id_evento}', [notaController::class, 'store']);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

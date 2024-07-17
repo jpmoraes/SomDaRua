@@ -11,7 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <link rel="stylesheet" href="{{asset($css)}}"/>
+  <link rel="stylesheet" href="{{asset($css)}}" />
   <link rel="stylesheet" href='{{asset("css/footer.css")}}'>
   <link rel="stylesheet" href='{{asset("css/header.css")}}'>
   <link rel="stylesheet" href='{{asset("css/swiper-bundle.min.css")}}'>
@@ -27,7 +27,7 @@
   <header class="header">
     <div class="headerSom">
       <a class="navbar-brand" href="/">
-        <img src="assets/img/som_rua.png" class="logoHeader" alt="Logo Som da Rua">
+        <img src='{{asset("assets/img/som_rua.png")}}' class="logoHeader" alt="Logo Som da Rua">
       </a>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -35,7 +35,7 @@
             aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <img src="assets/img/sOM DA RUA.png" class="logoHeader-offcanva" alt="Logo Som da Rua">
+                <img src='{{asset("assets/img/som_rua.png")}}' class="logoHeader-offcanva" alt="Logo Som da Rua">
               </h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
@@ -44,8 +44,18 @@
                 <li class="nav-item">
                   <a class="nav-link mx-lg-2" href="/dashboard">Dashboard</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="/admin/perfil">Perfil</a>
+                <li class="nav-item nav-link mx-lg-2 dropdown">
+                  <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff">
+                    Perfil
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="/admin/create">Empresario</a></li>
+                    <li><a class="dropdown-item" href="/admin/estabelecimento/show">Estabeleciomento</a></li>
+                  </ul>
+                </li>
+
+
+
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mx-lg-2" href="/suporte">Suporte</a>
@@ -65,7 +75,7 @@
 
 
   {{$slot}}
-  
+
   <section id="up"></section>
   <section id="down"></section>
   <section id="left"></section>

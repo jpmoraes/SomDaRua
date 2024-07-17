@@ -11,6 +11,14 @@ class CreateTipoRedeTable extends Migration
         Schema::create('tipo_rede', function (Blueprint $table) {
             $table->id('id_tipo_rede');
             $table->string('tipo', 45)->nullable();
+
+            DB::table('tipo_rede')->insert([
+                ['tipo' => 'Instagram'],
+                ['tipo' => 'Site'],
+                ['tipo' => 'Facebook'],
+                ['tipo' => 'Tik Tok'],
+                ['tipo' => 'Twitter'],
+            ]);
         });
     }
 

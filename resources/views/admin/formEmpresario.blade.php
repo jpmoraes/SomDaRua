@@ -6,7 +6,7 @@
             <p>Meus Dados</p>
         </div>
 
-        <form action="/admin/create" method="POST">
+        <form action="/admin/store" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">CPF</label>

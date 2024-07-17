@@ -6,7 +6,7 @@
             <input type="text" name="cpfEmpresario" id="cpfEmpresario" value="cpf" style="display: none;">
 
             <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Nome</label>
+                <label for="formGroupExampleInput" class="form-label">Nome do estabelecimento</label>
                 <input type="text" name="nome" class="form-control" id="formGroupExampleInput">
             </div>
             <div class="mb-3">
@@ -42,8 +42,13 @@
                 <input type="text" name="url" class="form-control" id="formGroupExampleInput">
             </div>
             <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Nome</label>
-                <input type="text" name="tipoRede" class="form-control" id="formGroupExampleInput">
+                <label for="formGroupExampleInput" class="form-label">Tipo de redes</label>
+                <select name= "tipoRede" class="form-select form-select-lg mb-3" aria-label="Large select example">
+                    <option value="1">Instagram</option>
+                    <option value="2">Site</option>
+                    <option value="3">Facebook</option>
+                    <option value="4">Twitter</option>
+                </select>
             </div>
             <button type="submit">enviar</button>
         </form>

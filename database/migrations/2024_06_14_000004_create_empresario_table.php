@@ -13,7 +13,6 @@ class CreateEmpresarioTable extends Migration
             $table->string('data_cadastro', 20)->nullable();
             $table->unsignedBigInteger('credenciais_id');
             $table->timestamps();
-
             $table->unique('cpf');
             $table->foreign('credenciais_id')->references('id')->on('users')->onDelete('cascade');
         });

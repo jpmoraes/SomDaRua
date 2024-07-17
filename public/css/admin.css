@@ -456,7 +456,8 @@ body {
   display: flex;
 }
 
-#icardEvento, #icardli {
+#icardEvento,
+#icardli {
   background-color: rgba(12, 1, 86, 0.1333333333) !important;
 }
 
@@ -477,4 +478,18 @@ body {
 
 #nome {
   float: right;
+}
+
+/*============PAGINA SHOW ESTABELECIMENTO======*/
+.topoPage {
+  display: flex;
+  flex-direction: row;
+}
+
+.topoPage button {
+  font-size: 20px;
+}
+
+.table th, td {
+  background-color: rgba(255, 255, 255, 0.3215686275) !important;
 }
