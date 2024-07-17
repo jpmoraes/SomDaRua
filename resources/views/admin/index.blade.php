@@ -47,11 +47,12 @@
     </div>
   </div>
   
+  @if ($eventosArray != null)
+    @foreach ($eventosArray as $evento)
+      <x-cardEvento nome="{{$evento['nome']}}" data="{{$evento['data']}}" genero="{{$evento['genero']}}" hora="{{$evento['hora']}}"></x-cardEvento>
+    @endforeach
+  @endif
 
-  @foreach ($eventosArray as $evento)
-    <x-cardEvento nome="{{$evento['nome']}}" data="{{$evento['data']}}" genero="{{$evento['genero']}}" hora="{{$evento['hora']}}"></x-cardEvento>
-  @endforeach
-  
   <!-- Modal -->
   <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">

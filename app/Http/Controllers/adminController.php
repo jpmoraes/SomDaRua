@@ -21,9 +21,19 @@ class adminController extends Controller
         $idSessao = Session::getId();
         $idCredencial = Secao::findOrFail($idSessao)->get('user_id')[0]['user_id'];
 
-        $cpfEmpresario = Empresario::where('credenciais_id', $idCredencial)->get('cpf')[0]['cpf'];
-        $idEstabelecimentoArray = Estabelecimento::where('empresario_cpf', $cpfEmpresario)->get('id_estabelecimento');
+        $cpfEmpresario = Empresario::where('credenciais_id', $idCredencial)->get('cpf');
+        $cpfEmpresarioArray = json_decode(json_encode($cpfEmpresario), true);
+
+        if($cpfEmpresario != []){
+            return view("admin.index")->with('eventosArray', null);
+        }
+        
+        $idEstabelecimentoArray = Estabelecimento::where('empresario_cpf', $cpfEmpresarioArray[0]['cpf'])->get('id_estabelecimento');
         $idEstabelecimentoArray = json_decode(json_encode($idEstabelecimentoArray), true);
+
+        if($idEstabelecimentoArray != []){
+            return view("admin.index")->with('eventosArray', null);
+        }
 
         //criação de lista de eventos de todos os estabelecimentos do empresário logado
         $eventosArray = [];
