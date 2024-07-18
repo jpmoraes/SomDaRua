@@ -80,7 +80,7 @@ body {
     margin-left: 10px;
   }
   .offcanvas-header, .offcanvas-body {
-    background-color: rgb(5, 91, 166);
+    background-color: rgb(27, 27, 27);
   }
 }
 .navbar-toggler {

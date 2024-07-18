@@ -52,19 +52,20 @@
                     <li><a class="dropdown-item" href="/admin/create">Empresario</a></li>
                     <li><a class="dropdown-item" href="/admin/estabelecimento/show">Estabeleciomento</a></li>
                   </ul>
-                </li class="nav-item nav-link mx-lg-2 dropdown">
-                  <form action="{{route('logout')}}" method="post">
-                    @csrf
-                    <a class="nav-link mx-lg-2" href="route('logout)" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
-                  </form>
+                  <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="/suporte">Suporte</a>
+                  </li>
+                  </li class="nav-item nav-link mx-lg-2 dropdown">
+                    <form action="{{route('logout')}}" method="post">
+                      @csrf
+                      <a class="nav-link mx-lg-2" href="route('logout)" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+                    </form>
 
-                </li>
+                  </li>
                 <li class="nav-item">
            
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="/suporte">Suporte</a>
-                </li>
+
               </ul>
             </div>
           </div>
