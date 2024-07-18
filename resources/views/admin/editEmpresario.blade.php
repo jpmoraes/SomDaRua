@@ -9,10 +9,10 @@
             <form action="/admin/update" method="POST">
                 @csrf
                 @method('PUT')
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">CPF</label>
                     <input type="text" name="novo_cpf" class="form-control" id="formGroupExampleInput" value="{{$empresario['cpf']}}">
-                </div>
+                </div>--->
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Nome</label>
                     <input type="text" name="novo_nome" class="form-control" id="formGroupExampleInput" value="{{$empresario['nome']}}">

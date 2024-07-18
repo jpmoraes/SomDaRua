@@ -9,6 +9,7 @@ class EmailEmpresario extends Model
 {
     use HasFactory;
     protected $table = 'email_empresario';
+    protected $primaryKey = 'id_email_empresario';
 
     public function empresario()
     {

@@ -18,7 +18,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/edit', [empresarioController::class, 'edit'])->name('empresario.edit');
     Route::put('/admin/update', [empresarioController::class, 'update'])->name('empresario.update');
 
-
     Route::get('/admin/estabelecimento/create', [estabelecimentoController::class, 'create'])->name('estabelecimento.create');
     Route::get('/admin/estabelecimento/show', [estabelecimentoController::class, 'show'])->name('estabelecimento.show');
     Route::post('/admin/estabelecimento/store', [estabelecimentoController::class, 'store']);
@@ -35,7 +34,9 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', [homeController::class, 'index']);
 Route::get('/saibamais', [saibamaisController::class, 'index']);
+
 Route::get('/generos', [pageGenerosController::class, 'index']);
+Route::post('/generos', [pageGenerosController::class, 'filtro']);
 
 Route::get('/avaliacao/{id_evento}', [notaController::class, 'index']);
 Route::post('/avaliacao/{id_evento}', [notaController::class, 'store']);

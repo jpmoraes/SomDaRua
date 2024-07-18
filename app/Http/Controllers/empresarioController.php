@@ -115,39 +115,40 @@ class empresarioController extends Controller
 
     public function update(Request $request)
     {
+        // Obter o CPF do Empresário a partir da sessão do usuário
+        $idSessao = Session::getId();
+        $idCredencial = Secao::findOrFail($idSessao)->get('user_id')[0]['user_id'];
+        $cpf = Empresario::where('credenciais_id', $idCredencial)->first()->cpf;
 
-    // Obter o CPF do Empresário a partir da sessão do usuário
-    $idSessao = Session::getId();
-    $idCredencial = Secao::findOrFail($idSessao)->get('user_id')[0]['user_id'];
-    $cpf = Empresario::where('credenciais_id', $idCredencial)->first()->cpf;
 
-    // Atualizar Empresario
-    $updateEmpresario = Empresario::find($cpf);
-    $updateEmpresario->cpf = $request->novo_cpf;
-    $updateEmpresario->nome = $request->novo_nome;
-    $updateEmpresario->save();
+        // Atualizar Empresario
+        $updateEmpresario = Empresario::where('cpf', $cpf)->first();
+        $updateEmpresario->nome = $request->novo_nome;
+        $updateEmpresario->save();
 
-    // Atualizar EnderecoEmpresario
-    $updateEnderecoEmpresario = EnderecoEmpresario::where('empresario_cpf', $cpf)->first();
-    $updateEnderecoEmpresario->rua = $request->novo_rua;
-    $updateEnderecoEmpresario->bairro = $request->novo_bairro;
-    $updateEnderecoEmpresario->complemento = $request->novo_complemento;
-    $updateEnderecoEmpresario->cep = $request->novo_cep;
-    $updateEnderecoEmpresario->numero = $request->novo_numero;
-    $updateEnderecoEmpresario->save();
+        // Atualizar EnderecoEmpresario
+        $updateEnderecoEmpresario = EnderecoEmpresario::where('empresario_cpf', $cpf)->first();
+        $updateEnderecoEmpresario->rua = $request->novo_rua;
+        $updateEnderecoEmpresario->bairro = $request->novo_bairro;
+        $updateEnderecoEmpresario->complemento = $request->novo_complemento;
+        $updateEnderecoEmpresario->cep = $request->novo_cep;
+        $updateEnderecoEmpresario->numero = $request->novo_numero;
+        $updateEnderecoEmpresario->save();
 
-    // Atualizar TelefoneEmpresario
-    $updateTelefoneEmpresario = TelefoneEmpresario::where('empresario_cpf', $cpf)->first();
-    $updateTelefoneEmpresario->telefone = $request->novo_telefone;
-    $updateTelefoneEmpresario->save();
+        // Atualizar TelefoneEmpresario
+        $updateTelefoneEmpresario = TelefoneEmpresario::where('empresario_cpf', $cpf)->first();
+        $updateTelefoneEmpresario->telefone = $request->novo_telefone;
+        $updateTelefoneEmpresario->save();
 
-    // Atualizar EmailEmpresario
-    $updateEmailEmpresario = EmailEmpresario::where('empresario_cpf', $cpf)->first();
-    $updateEmailEmpresario->email = $request->novo_email;
-    $updateEmailEmpresario->save();
+        // Atualizar EmailEmpresario
+        $updateEmailEmpresario = EmailEmpresario::where('empresario_cpf', $cpf)->first();
+        $updateEmailEmpresario->email = $request->novo_email;
+        $updateEmailEmpresario->save();
 
-    return redirect("/dashboard");
+        // Redirecionar para a página de dashboard
+        return redirect("/dashboard");
     }
+
 
 
 }

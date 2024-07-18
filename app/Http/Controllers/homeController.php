@@ -26,8 +26,6 @@ class HomeController extends Controller
             ->get('nome');
         $generos = json_decode(json_encode($generos), true)[0];
 
-         
-
         $evento['genero'] = $generos['nome'];
     }
 

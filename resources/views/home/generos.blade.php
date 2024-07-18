@@ -41,52 +41,66 @@
                 <li><a href="#">Axé/Pagode</a></li>
             </ul>
         </div>
+        <form action="" method="post">
+        @csrf
+
         <div class="galeria-generos">
 
-            <div class="item-galeria">
+            <label class="item-galeria" for="reggae">
                 <p>Reggae</p>
                 <img class="item-galeria-generos" src="assets/img/index/generos/reggae.jpg" alt="">
-            </div>
+                <input type="radio" name="genero" value="7" id="reggae">
+            </label>
 
-            <div class="item-galeria">
+            <label class="item-galeria" for="eletronica">
                 <p>Eletrônica</p>
                 <img class="item-galeria-generos" src="assets/img/index/generos/eletro.jpg" alt="">
-            </div>
+                <input type="radio" name="genero" value="8" id="eletronica">
 
-            <div class="item-galeria">
+            </label>
+
+            <label class="item-galeria" for="forro">
                 <p>Forro/Sertanejo</p>
                 <img class="item-galeria-generos" src="assets/img/index/generos/forro.jpg" alt="">
-            </div>
+                <input type="radio" name="genero" value="2" id="forro">
+            </label>
 
-            <div class="item-galeria">
+            <label class="item-galeria" for="jazz">
                 <p>Jazz</p>
                 <img class="item-galeria-generos" src="assets/img/index/generos/jzz.jpg" alt="">
-            </div>
+                <input type="radio" name="genero" value="3" id="jazz">
 
-            <div class="item-galeria">
+            </label>
+
+            <label class="item-galeria" for="rap">
                 <p>Rap/Trap</p>
                 <img class="item-galeria-generos" src="assets/img/index/generos/rap.jpg" alt="">
-            </div>
+                <input type="radio" name="genero" value="4" id="rap">
+            </label>
 
-            <div class="item-galeria">
+            <label class="item-galeria" for="rock">
                 <p>Rock/Pop</p>
                 <img class="item-galeria-generos" src="assets/img/index/generos/rck.jpg" alt="">
-            </div class="item-galeria">
+                <input type="radio" name="genero" value="5" id="rock">
+            </label>
 
-            <div class="item-galeria">
+            <label class="item-galeria" for="samba">
                 <p>Samba</p>
                 <img class="item-galeria-generos" src="assets/img/index/generos/samba.jpg" alt="">
-            </div>
+                <input type="radio" name="genero" value="1" id="samba">
+            </label>
 
-            <div class="item-galeria">
+            <label class="item-galeria" for="mpb">
                 <p>MPB</p>
                 <img class="item-galeria-generos" src="assets/img/index/generos/mpb.jpg" alt="">
-            </div>
+                <input type="radio" name="genero" value="9" id="mpb">
+            </label>
 
-            <div class="item-galeria">
+            <label class="item-galeria" for="axe">
                 <p>Axé/Pagode</p>
                 <img class="item-galeria-generos" src="assets/img/index/generos/axepgd.jpg" alt="">
-            </div>
+                <input type="radio" name="genero" value="6" id="axe">
+            </label>
         </div>
 
         <div class="button-generos">
@@ -94,12 +108,12 @@
             <div class="button-calendario">
                 <!-- <h2>Select a Date:</h2> -->
                 <div class="input-group mb-3">
-
                     <div class="input-group-append">
                     </div>
-                    <input type="text" class="form-control" id="datepicker" placeholder="Escolha sua data" readonly>
+                        <input type="text" class="form-control" id="datepicker" name="date" placeholder="Escolha sua data" readonly>
+                        <button type="submit">Aplicar</button>
+                    
                 </div>
-
 
                 <script>
                     $(document).ready(function () {
@@ -122,7 +136,7 @@
 
 
         </div>
-
+        </form>
 
         <div class="titulo-agenda-generos">
             <h3 id="titulo-agenda-generos">Eventos futuros</h3>
@@ -130,55 +144,13 @@
 
         <div class="agenda-generos container">
 
-            <div class="container-generos container">
-            <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Rock Paulera</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">18 de Julho</li>
-          <li class="list-group-item">Samba na Laje</li>
-          <li class="list-group-item">19h - PITUBA</li>
-        </ul>
-      </div>
+        @if ($eventosArray != null)
+            @foreach ($eventosArray as $evento)
+                <x-cardEventoHome nome="{{$evento['nome']}}" data="{{$evento['data']}}" hora="{{$evento['hora']}}" genero="{{$evento['genero'] }}">
+                </x-cardEventoHome>
+            @endforeach
+        @endif
 
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Rock Paulera</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">20 de Julho</li>
-          <li class="list-group-item">22H</li>
-          <li class="list-group-item">Commons Bar - RV</li>
-        </ul>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">JAM no MAM</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">21 de Julho</li>
-          <li class="list-group-item">17h</li>
-          <li class="list-group-item">AV. Contorno</li>
-        </ul>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Pagode Delas</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">25 de Julho</li>
-          <li class="list-group-item">22h</li>
-          <li class="list-group-item">2 de Julho</li>
-        </ul>
-      </div>
-            </div>
         </div>
 
     </section>

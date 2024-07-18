@@ -9,6 +9,7 @@ class TelefoneEmpresario extends Model
 {
     use HasFactory;
     protected $table = 'telefone_empresario';
+    protected $primaryKey = 'id_tel_empresario';
 
     public function empresario()
     {
