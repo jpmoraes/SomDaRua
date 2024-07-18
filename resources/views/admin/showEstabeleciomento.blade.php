@@ -75,39 +75,39 @@
                                         @method('PUT')
                                             <div class="mb-3">
                                                 <label for="formGroupExampleInput" class="form-label">Nome do estabelecimento</label>
-                                                <input type="text" name="nome" class="form-control" id="formGroupExampleInput">
+                                                <input type="text" name="nome" class="form-control" id="formGroupExampleInput" value="{{$estabelecimento['nome']}}">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="formGroupExampleInput" class="form-label">CPF/CNPJ</label>
-                                                <input type="text" name="cpf_cnpj" class="form-control" id="formGroupExampleInput">
+                                                <input type="text" name="cpf_cnpj" class="form-control" id="formGroupExampleInput" value="{{$estabelecimento['cpf_cnpj']}}">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="formGroupExampleInput" class="form-label">Rua</label>
-                                                <input type="text" name="rua" class="form-control" id="formGroupExampleInput">
+                                                <input type="text" name="rua" class="form-control" id="formGroupExampleInput" value="{{$estabelecimento['rua']}}">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="formGroupExampleInput" class="form-label">Bairro</label>
-                                                <input type="text" name="bairro" class="form-control" id="formGroupExampleInput">
+                                                <input type="text" name="bairro" class="form-control" id="formGroupExampleInput" value="{{$estabelecimento['bairro']}}">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="formGroupExampleInput" class="form-label">Complemento</label>
-                                                <input type="text" name="complemento" class="form-control" id="formGroupExampleInput">
+                                                <input type="text" name="complemento" class="form-control" id="formGroupExampleInput" value="{{$estabelecimento['complemento']}}" >
                                             </div>
                                             <div class="mb-3">
                                                 <label for="formGroupExampleInput" class="form-label">CEP</label>
-                                                <input type="text" name="cep" class="form-control" id="formGroupExampleInput">
+                                                <input type="text" name="cep" class="form-control" id="formGroupExampleInput" value="{{$estabelecimento['cep']}}">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="formGroupExampleInput" class="form-label">Número</label>
-                                                <input type="text" name="numero" class="form-control" id="formGroupExampleInput">
+                                                <input type="text" name="numero" class="form-control" id="formGroupExampleInput" value="{{$estabelecimento['numero']}}">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="formGroupExampleInput" class="form-label">Telefone</label>
-                                                <input type="text" name="telefone" class="form-control" id="formGroupExampleInput">
+                                                <input type="text" name="telefone" class="form-control" id="formGroupExampleInput" valeu="{{$estabelecimento['telefone']}}">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="formGroupExampleInput" class="form-label">URL</label>
-                                                <input type="text" name="url" class="form-control" id="formGroupExampleInput">
+                                                <input type="text" name="url" class="form-control" id="formGroupExampleInput" value="{{$estabelecimento['url']}}">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="formGroupExampleInput" class="form-label">Tipo de redes</label>

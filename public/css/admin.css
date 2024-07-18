@@ -500,3 +500,7 @@ body {
 .table th, td {
   background-color: rgba(255, 255, 255, 0.3176470588) !important;
 }
+
+.position-absolute {
+  display: flex;
+}

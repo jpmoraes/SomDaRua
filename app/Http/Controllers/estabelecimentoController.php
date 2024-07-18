@@ -68,14 +68,14 @@ class estabelecimentoController extends Controller
                                             ->join('telefone_estabelecimento', 'estabelecimento.id_estabelecimento', '=', 'telefone_estabelecimento.estabelecimento_id')
                                             ->join('rede_social', 'estabelecimento.id_estabelecimento', '=', 'rede_social.estabelecimento_id')
                                             ->join('tipo_rede', 'rede_social.tipo_rede_id', '=', 'tipo_rede.id_tipo_rede')
-                                            ->orderBy('id_estabelecimento', 'asc')->get(['id_estabelecimento', 'nome', 'rua', 'bairro', 'complemento', 'cep', 'numero', 'telefone', 'url', 'tipo_rede.tipo']);
+                                            ->orderBy('id_estabelecimento', 'asc')->get(['id_estabelecimento', 'nome', 'rua', 'bairro', 'complemento', 'cep', 'numero', 'telefone', 'url', 'tipo_rede.tipo','cpf_cnpj']);
 
         $estabelecimentoArray = json_decode(json_encode($estabelecimentoArray), true);
 
         $i = 0;
         foreach($estabelecimentoArray as $estabelecimento){
             $estabelecimento['endereco'] = $estabelecimento['rua'].', '.$estabelecimento['numero'].', '.$estabelecimento['bairro'].', '.$estabelecimento['complemento'].', '.$estabelecimento['cep'];
-            unset($estabelecimento['rua'], $estabelecimento['numero'], $estabelecimento['bairro'], $estabelecimento['complemento'],$estabelecimento['cep']);
+            //unset($estabelecimento['rua'], $estabelecimento['numero'], $estabelecimento['bairro'], $estabelecimento['complemento'],$estabelecimento['cep']);
             $estabelecimentoArray[$i] = $estabelecimento;
             $i++;
         }
