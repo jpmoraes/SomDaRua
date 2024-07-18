@@ -9,6 +9,7 @@ class Secao extends Model
 {
     use HasFactory;
     protected $table = "sessions";
+    protected $primaryKey = "id";
 
     public function User()
     {

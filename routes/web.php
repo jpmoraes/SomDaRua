@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/dashboard', [adminController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/admin/create', [empresarioController::class, 'create']);
+    Route::get('/admin/create', [empresarioController::class, 'create'])->name('empresario.show');
     Route::post('/admin/store', [empresarioController::class, 'store']);
 
     Route::get('/admin/estabelecimento/create', [estabelecimentoController::class, 'create'])->name('estabelecimento.create');

@@ -20,13 +20,25 @@ class empresarioController extends Controller
         return view('admin.index');
     }
     public function create(){
+        $idSessao = Session::getId();
+        $idCredencial = Secao::findOrFail($idSessao)->get('user_id')[0]['user_id'];
+
+        $cpfEmpresario = Empresario::where('credenciais_id', $idCredencial)->get('cpf');
+        $cpfEmpresarioArray = json_decode(json_encode($cpfEmpresario), true);
+
+        if($cpfEmpresarioArray != []){
+            return redirect()->route("dashboard");
+        }
+
         return view('admin.formEmpresario');
     }
 
     public function store(Request $request)
     {
         $idSessao = Session::getId();
-        $idCredencial = Secao::findOrFail($idSessao)->get('user_id')[0]['user_id'];
+
+        $idCredencial = Secao::findOrFail($idSessao)->first('user_id');
+        $idCredencial = json_decode(json_encode($idCredencial), true)['user_id'];
 
         $data = $request->all();
         $cpf = $data["cpf"];

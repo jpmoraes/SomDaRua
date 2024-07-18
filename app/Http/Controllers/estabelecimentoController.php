@@ -72,9 +72,6 @@ class estabelecimentoController extends Controller
 
         $estabelecimentoArray = json_decode(json_encode($estabelecimentoArray), true);
 
-
-
-
         $i = 0;
         foreach($estabelecimentoArray as $estabelecimento){
             $estabelecimento['endereco'] = $estabelecimento['rua'].', '.$estabelecimento['numero'].', '.$estabelecimento['bairro'].', '.$estabelecimento['complemento'].', '.$estabelecimento['cep'];
@@ -83,9 +80,9 @@ class estabelecimentoController extends Controller
             $i++;
         }
 
-        return view('admin.showEstabeleciomento')->with('estabelecimentoArray', $estabelecimentoArray);
+        return view('admin.showEstabeleciomento')
+                ->with('estabelecimentoArray', $estabelecimentoArray);
     }
-
 
     public function delete($id) {
         $estabelecimento = Estabelecimento::find($id);
