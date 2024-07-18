@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 class GeneroEvento extends Pivot
 {
     protected $table = 'genero_evento';
-
+    protected $primaryKey = 'evento_id';
     public function genero()
     {
         return $this->belongsTo(Genero::class, 'genero_id');

@@ -55,38 +55,40 @@ class eventoController extends Controller
 
         return redirect("dashboard");//TODO ajustar retorno
     }
-    public function show(Request $request)
-    {
-        $showEvento = Evento::orderBy('id', 'asc')->get();
 
-        $showAtracao = Atracao::orderBy('id', 'asc')->get();
-
-        return view("admin.index");
+    public function delete($id) {
+        $evento = Evento::find($id);
+        $evento->delete();
+        return redirect()->route('dashboard');
     }
+
     public function update(Request $request, $id)
     {
-        $updateEvento = Evento::findOrFail($id); //TODO modificar
+        $data = $request->all();        
+        $evento = Evento::findOrFail($id);
+        $evento->nome = $data['nome'];
+        $evento->data = $data['data'];
+        $evento->hora = $data['hora'];
+        $evento->valor_couvert = $data['valor_couvert'];
+        $evento->descricao = $data['descricao'];
+        $evento->update();
 
-        $updateEvento->nome = $request->novo_nome;
-        $updateEvento->data = $request->novo_data;
-        $updateEvento->hora = $request->novo_hora;
-        $updateEvento->valor_couvert = $request->novo_valor_couvert;
-        $updateEvento->descricao = $request->novo_descricao;
+        $generoEvento = GeneroEvento::findOrFail($id);
+        $generoEvento->evento_id = $id;
+        $generoEvento->genero_id = $data['genero_id'];
+        $generoEvento->update();
 
-        $updateEvento->save();
+        $atracao = Atracao::findOrFail($id);
+        $atracao->nome = $data['atracao'];
+        $atracao->evento_id = $id;
+        $atracao->update();
 
-        $updateAtracao = Atracao::findOrFail($id); //TODO modificar
-        
-        $updateAtracao->nome = $request->novo_nome_atracao;
 
-        $updateAtracao->save();
-
-        return redirect("/dashboard");
+        return redirect()->route('dashboard');
     }
 
-    public function getQrcode(Request $request){
-        $id = $request['id'];
-        $link = Avaliacao::where('id_avaliacao', $id)->get('link_avaliacao')[0]['link_avaliacao'];
+    public function getQrcode($id){
+        $link = Avaliacao::find($id)['link_avaliacao'];
 
         $qrcode = ['qrcode' => Qrcode::size(120)->generate($link),
                     'link' => $link];

@@ -25,8 +25,10 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/admin/evento/create', [eventoController::class, 'create']);
     Route::post('/admin/evento/store', [eventoController::class, 'store']);
+    Route::delete('/admin/evento/delete/{evento}', [eventoController::class, 'delete'])->name('evento.delete');
+    Route::put('/admin/evento/update/{evento}', [eventoController::class, 'update'])->name('evento.update');
 
-    Route::get('/qrcode', [eventoController::class, 'getQrcode']);
+    Route::get('/qrcode/{id}', [eventoController::class, 'getQrcode'])->name('qrcode');
 
 });
 

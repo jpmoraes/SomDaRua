@@ -10,6 +10,7 @@ class Atracao extends Model
     use HasFactory;
 
     protected $table = 'atracao';
+    protected $primaryKey = 'evento_id';
 
     public function evento()
     {

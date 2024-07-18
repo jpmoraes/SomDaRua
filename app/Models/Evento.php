@@ -10,6 +10,7 @@ class Evento extends Model
     use HasFactory;
 
     protected $table = 'evento';
+    protected $primaryKey = 'id_evento';
 
     public function estabelecimento()
     {

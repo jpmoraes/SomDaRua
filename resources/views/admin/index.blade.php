@@ -58,9 +58,8 @@
 <div class="cardsOrg">
   @if ($eventosArray != null)
     @foreach ($eventosArray as $evento)
-    <x-cardEvento nome="{{$evento['nome']}}" data="{{$evento['data']}}" genero="{{$evento['genero']}}"
-    hora="{{$evento['hora']}}"></x-cardEvento>
-  @endforeach
+      <x-cardEvento nome="{{$evento['nome']}}" data="{{$evento['data']}}" genero="{{$evento['genero']}}" hora="{{$evento['hora']}}" idEvento="{{$evento['id_evento']}}"></x-cardEvento>
+    @endforeach
   @endif
 </div>
 
@@ -110,9 +109,11 @@
                 <label for="eventLocation">Local do Evento</label>
                 <select id="generoMusicalSelect" name="genero_id" required>
                   <option value="" disabled selected hidden></option>
-                  @foreach($estabelecimentoArray as $estabelecimento)
-                    <option value="{{$estabelecimento['id_estabelecimento']}}">{{$estabelecimento['nome']}}</option>
-                  @endforeach
+                  @if($estabelecimentoArray != null)
+                    @foreach($estabelecimentoArray as $estabelecimento)
+                      <option value="{{$estabelecimento['id_estabelecimento']}}">{{$estabelecimento['nome']}}</option>
+                    @endforeach
+                  @endif
                 </select>
               </div>
               <div class="form-group">

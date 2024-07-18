@@ -25,7 +25,8 @@ class adminController extends Controller
         $cpfEmpresarioArray = json_decode(json_encode($cpfEmpresario), true);
 
         if($cpfEmpresarioArray === []){ //verifica se empresario existe
-            return view("admin.index")->with('eventosArray', null);
+            return view("admin.index")->with(['eventosArray' => null,
+                                              'estabelecimentoArray' => null]);
         }
         
         $estabelecimentoArray = Estabelecimento::where('empresario_cpf', $cpfEmpresarioArray[0]['cpf'])->get(['id_estabelecimento', 'nome']);
@@ -37,7 +38,8 @@ class adminController extends Controller
         }
         
         if($idEstabelecimentoArray === []){ //verifica se estabelecimento existe
-            return view("admin.index")->with('eventosArray', null);
+            return view("admin.index")->with(['eventosArray' => null,
+                                              'estabelecimentoArray' => null]);
         }
 
         //criação de lista de eventos de todos os estabelecimentos do empresário logado

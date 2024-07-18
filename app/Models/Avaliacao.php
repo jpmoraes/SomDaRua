@@ -10,6 +10,7 @@ class Avaliacao extends Model
     use HasFactory;
 
     protected $table = "avaliacao";
+    protected $primaryKey = 'id_avaliacao';
     
     public function evento()
     {
