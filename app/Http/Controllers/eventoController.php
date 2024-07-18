@@ -22,7 +22,6 @@ class eventoController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();        
-
         $evento = new Evento();
         $evento->nome = $data['nome'];
         $evento->data = $data['data'];
@@ -33,6 +32,7 @@ class eventoController extends Controller
         $evento->save();
 
         $evento_id = Evento::orderBy('id_evento', 'desc')->first()->id_evento;
+
 
         $generoEvento = new GeneroEvento();
         $generoEvento->evento_id = $evento_id;

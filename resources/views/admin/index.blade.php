@@ -75,7 +75,6 @@
             </header>
             <form action="/admin/evento/store" method="POST" enctype="multipart/form-data" style="max-width: 270px;">
               @csrf
-              <input type="text" name="estabelecimento_id" id="estabelecimento_id" style="display: none;" value="1">
               <div class="form-group">
                 <label for="eventName">Nome do evento</label>
                 <input type="text" id="eventName" name="nome" required>
@@ -107,7 +106,7 @@
               </div>
               <div class="form-group">
                 <label for="eventLocation">Local do Evento</label>
-                <select id="generoMusicalSelect" name="genero_id" required>
+                <select id="eventLocation" name="estabelecimento_id" required>
                   <option value="" disabled selected hidden></option>
                   @if($estabelecimentoArray != null)
                     @foreach($estabelecimentoArray as $estabelecimento)

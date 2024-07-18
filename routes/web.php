@@ -16,7 +16,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/create', [empresarioController::class, 'create']);
     Route::post('/admin/store', [empresarioController::class, 'store']);
 
-
     Route::get('/admin/estabelecimento/create', [estabelecimentoController::class, 'create']);
     Route::get('/admin/estabelecimento/show', [estabelecimentoController::class, 'show']);
     Route::post('/admin/estabelecimento/store', [estabelecimentoController::class, 'store']);
