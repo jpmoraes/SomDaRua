@@ -13,20 +13,22 @@ class HomeController extends Controller
     public function index()
     {
         $dataAtual = Carbon::now();
-    $dataLimite = $dataAtual->copy()->addDays(60);
+        $dataLimite = $dataAtual->copy()->addDays(60);
 
     $eventosArray = Evento::whereDate('data', '>=', $dataAtual)
         ->whereDate('data', '<=', $dataLimite)
         ->orderBy('data', 'asc')
         ->get(['id_evento', 'nome', 'data', 'hora']);
 
-    foreach ($eventosArray as &$evento) {
+    foreach ($eventosArray as $evento) {
         $generos = GeneroEvento::where('evento_id', $evento['id_evento'])
             ->join('genero', 'genero.id_genero', '=', 'genero_evento.genero_id')
-            ->pluck('genero.nome')
-            ->toArray();
+            ->get('nome');
+        $generos = json_decode(json_encode($generos), true)[0];
 
-        $evento['generos'] = $generos;
+         
+
+        $evento['genero'] = $generos['nome'];
     }
 
     return view("home.index")->with('eventosArray', $eventosArray);

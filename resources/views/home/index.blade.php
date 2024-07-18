@@ -36,12 +36,11 @@
       <div class="container-agenda">
 
         @if ($eventosArray != null)
-      @foreach ($eventosArray as $evento)
-      <x-cardEventoHome nome="{{$evento['nome']}}" data="{{$evento['data']}}" hora="{{$evento['hora']}}"
-      genero="{{$evento['genero'] }}">
-      </x-cardEventoHome>
-    @endforeach
-    @endif
+        @foreach ($eventosArray as $evento)
+        <x-cardEventoHome nome="{{$evento['nome']}}" data="{{$evento['data']}}" hora="{{$evento['hora']}}" genero="{{$evento['genero'] }}">
+        </x-cardEventoHome>
+        @endforeach
+        @endif
       </div>
 
       <nav class="pagination-outer" aria-label="Page navigation">
@@ -170,8 +169,7 @@
               <img src="assets/img/index/saibaMais/faroldabarra.jpg" alt="Farol da Barra" class="d-block w-100">
             </div>
             <div class="carousel-item saibaMaisItem" data-bs-interval="5000">
-              <img src="assets/img/index/saibaMais/fitabonfim.jpg" alt="Fitas do Senhor do Bonfim"
-                class="d-block w-100">
+              <img src="assets/img/index/saibaMais/fitabonfim.jpg" alt="Fitas do Senhor do Bonfim" class="d-block w-100">
             </div>
             <div class="carousel-item saibaMaisItem" data-bs-interval="5000">
               <img src="assets/img/index/saibaMais/pelourinho.jpg" alt="Pelourinho" class="d-block w-100">
