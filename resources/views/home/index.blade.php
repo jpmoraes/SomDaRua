@@ -1,5 +1,5 @@
 <x-layout css="css/index.css">
-<main class="gridMain">
+  <main class="gridMain">
     <section class="destaque">
       <div id="idestaque" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators destaque-indicators">
@@ -23,7 +23,7 @@
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#idestaque" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon destaque-icon destaque-prev-icon"></span>
+          <span class="carousel-control-prev-icon destaque-icon destaque-prev-icon"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#idestaque" data-bs-slide="next">
           <span class="carousel-control-next-icon destaque-icon destaque-next-icon"></span>
@@ -34,51 +34,16 @@
     <section class="agenda" id="agenda">
       <h1>Agenda</h1>
       <div class="container-agenda">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Rock Paulera</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">18 de Julho</li>
-          <li class="list-group-item">Samba na Laje</li>
-          <li class="list-group-item">19h - PITUBA</li>
-        </ul>
+
+        @if ($eventosArray != null)
+      @foreach ($eventosArray as $evento)
+      <x-cardEventoHome nome="{{$evento['nome']}}" data="{{$evento['data']}}" hora="{{$evento['hora']}}"
+      genero="{{$evento['genero'] }}">
+      </x-cardEventoHome>
+    @endforeach
+    @endif
       </div>
 
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Rock Paulera</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">20 de Julho</li>
-          <li class="list-group-item">22H</li>
-          <li class="list-group-item">Commons Bar - RV</li>
-        </ul>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">JAM no MAM</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">21 de Julho</li>
-          <li class="list-group-item">17h</li>
-          <li class="list-group-item">AV. Contorno</li>
-        </ul>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Pagode Delas</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">25 de Julho</li>
-          <li class="list-group-item">22h</li>
-          <li class="list-group-item">2 de Julho</li>
-        </ul>
-      </div>
-    </div>
-    
       <nav class="pagination-outer" aria-label="Page navigation">
         <ul class="pagination">
           <li class="page-item">
@@ -186,7 +151,7 @@
               </a>
             </article>
           </div>
-          
+
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
@@ -194,46 +159,47 @@
       </div>
     </section>
 
-  <section class="saibaMais d-flex justify-content-center">
-    <a href="#" id="isaibaMais">
-      <div class="carousel slide saibaMais carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner saibaMaisInner">
-          <div class="carousel-item active saibaMaisItem" data-bs-interval="5000">
-            <img src="assets/img/index/saibaMais/elevadorlacerda.jpg" alt="Elevador Lacerda" class="d-block w-100">
-          </div>
-          <div class="carousel-item saibaMaisItem" data-bs-interval="5000">
-            <img src="assets/img/index/saibaMais/faroldabarra.jpg" alt="Farol da Barra" class="d-block w-100">
-          </div>
-          <div class="carousel-item saibaMaisItem" data-bs-interval="5000">
-            <img src="assets/img/index/saibaMais/fitabonfim.jpg" alt="Fitas do Senhor do Bonfim" class="d-block w-100">
-          </div>
-          <div class="carousel-item saibaMaisItem" data-bs-interval="5000">
-            <img src="assets/img/index/saibaMais/pelourinho.jpg" alt="Pelourinho" class="d-block w-100">
+    <section class="saibaMais d-flex justify-content-center">
+      <a href="#" id="isaibaMais">
+        <div class="carousel slide saibaMais carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner saibaMaisInner">
+            <div class="carousel-item active saibaMaisItem" data-bs-interval="5000">
+              <img src="assets/img/index/saibaMais/elevadorlacerda.jpg" alt="Elevador Lacerda" class="d-block w-100">
+            </div>
+            <div class="carousel-item saibaMaisItem" data-bs-interval="5000">
+              <img src="assets/img/index/saibaMais/faroldabarra.jpg" alt="Farol da Barra" class="d-block w-100">
+            </div>
+            <div class="carousel-item saibaMaisItem" data-bs-interval="5000">
+              <img src="assets/img/index/saibaMais/fitabonfim.jpg" alt="Fitas do Senhor do Bonfim"
+                class="d-block w-100">
+            </div>
+            <div class="carousel-item saibaMaisItem" data-bs-interval="5000">
+              <img src="assets/img/index/saibaMais/pelourinho.jpg" alt="Pelourinho" class="d-block w-100">
+            </div>
           </div>
         </div>
-      </div>
-      <div id="ilabel">Saiba Mais</div>
-    </a>
-  </section>
+        <div id="ilabel">Saiba Mais</div>
+      </a>
+    </section>
 
     <section class="sobreNos" id="sobreNos">
-        <h1>Sobre Nós</h1>
-        <p>
-          <strong>“Som da Rua”</strong> é muito mais do que uma empresa de eventos; é uma ponte entre a energia
-          contagiante de
-          Salvador e os visitantes que buscam experiências autênticas. Com uma visão inovadora, nosso objetivo
-          é mapear e conectar as pessoas com as festas mais vibrantes da cidade, oferecendo uma imersão
-          completa na rica cultura baiana.
-          Nossa equipe dedicada trabalha incansavelmente para identificar e promover eventos que capturam a
-          essência única de Salvador: Desde os famosos carnavais de rua até as festas tradicionais nos bairros
-          históricos. Com um olhar atento às preferências dos turistas, garantimos que cada experiência seja
-          memorável e enriquecedora.
-          Ao colaborar com parceiros locais e especialistas em turismo, criamos roteiros personalizados que
-          destacam o melhor da cidade. Proporcionando aos visitantes uma jornada autêntica e inesquecível.
-          <strong>“Som da Rua”</strong> não apenas organiza eventos, mas também constrói conexões duradouras entre
-          os turistas
-          e a vibrante cultura de Salvador. Venha se juntar a nós e mergulhe na festa que é Salvador!
-        </p>
+      <h1>Sobre Nós</h1>
+      <p>
+        <strong>“Som da Rua”</strong> é muito mais do que uma empresa de eventos; é uma ponte entre a energia
+        contagiante de
+        Salvador e os visitantes que buscam experiências autênticas. Com uma visão inovadora, nosso objetivo
+        é mapear e conectar as pessoas com as festas mais vibrantes da cidade, oferecendo uma imersão
+        completa na rica cultura baiana.
+        Nossa equipe dedicada trabalha incansavelmente para identificar e promover eventos que capturam a
+        essência única de Salvador: Desde os famosos carnavais de rua até as festas tradicionais nos bairros
+        históricos. Com um olhar atento às preferências dos turistas, garantimos que cada experiência seja
+        memorável e enriquecedora.
+        Ao colaborar com parceiros locais e especialistas em turismo, criamos roteiros personalizados que
+        destacam o melhor da cidade. Proporcionando aos visitantes uma jornada autêntica e inesquecível.
+        <strong>“Som da Rua”</strong> não apenas organiza eventos, mas também constrói conexões duradouras entre
+        os turistas
+        e a vibrante cultura de Salvador. Venha se juntar a nós e mergulhe na festa que é Salvador!
+      </p>
     </section>
   </main>
 
