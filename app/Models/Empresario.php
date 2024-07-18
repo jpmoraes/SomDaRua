@@ -10,6 +10,7 @@ class Empresario extends Model
     use HasFactory;
 
     protected $table = 'empresario';
+    protected $primaryKey = 'cpf';
 
     public function User()
     {

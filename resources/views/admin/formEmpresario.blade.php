@@ -41,15 +41,11 @@
                 <input type="text" name="telefone" class="form-control" id="formGroupExampleInput">
             </div>
             <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">URL</label>
-                <input type="text" name="url" class="form-control" id="formGroupExampleInput">
-            </div>
-            <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Email</label>
                 <input type="text" name="email" class="form-control" id="formGroupExampleInput">
             </div>
 
-            <button type="submit">enviar</button>
+            <button type="submit">Salvar</button>
 
         </form>
     </div>

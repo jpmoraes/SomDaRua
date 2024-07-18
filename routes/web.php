@@ -15,6 +15,9 @@ Route::get('/dashboard', [adminController::class, 'index'])->middleware(['auth',
 Route::middleware('auth')->group(function () {
     Route::get('/admin/create', [empresarioController::class, 'create'])->name('empresario.show');
     Route::post('/admin/store', [empresarioController::class, 'store']);
+    Route::get('/admin/edit', [empresarioController::class, 'edit'])->name('empresario.edit');
+    Route::put('/admin/update', [empresarioController::class, 'update'])->name('empresario.update');
+
 
     Route::get('/admin/estabelecimento/create', [estabelecimentoController::class, 'create'])->name('estabelecimento.create');
     Route::get('/admin/estabelecimento/show', [estabelecimentoController::class, 'show'])->name('estabelecimento.show');
