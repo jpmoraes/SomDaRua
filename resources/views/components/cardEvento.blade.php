@@ -9,7 +9,7 @@
     </ul>
 
     <div class="position-absolute bottom-0 end-0 m-1">
-            <button class="btn btn-secondary btn-sm me-1" data-bs-toggle="modal" data-bs-target="#iupdateModal">
+            <button class="btn btn-secondary btn-sm me-1" data-bs-toggle="modal" data-bs-target="#iupdateModal{{$idEvento}}">
               <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-gear"
                 viewBox="0 0 16 16">
                 <path
@@ -19,7 +19,7 @@
               </svg>
             </button>
 
-            <div class="modal fade" id="iupdateModal" tabindex="-1">
+            <div class="modal fade" id="iupdateModal{{$idEvento}}" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">

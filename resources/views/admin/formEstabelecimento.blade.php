@@ -2,9 +2,6 @@
     <div class="container">
         <form action="/admin/estabelecimento/store" method="POST">
             @csrf
-            <!-- esse campo ta oculto, precisa puxar o cpf do empresario que vc for gerar o estabelecimento -->
-            <input type="text" name="cpfEmpresario" id="cpfEmpresario" value="cpf" style="display: none;">
-
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Nome do estabelecimento</label>
                 <input type="text" name="nome" class="form-control" id="formGroupExampleInput">

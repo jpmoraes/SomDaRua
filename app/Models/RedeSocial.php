@@ -9,6 +9,7 @@ class RedeSocial extends Model
 {
     use HasFactory;
     protected $table = 'rede_social';
+    protected $primaryKey = 'id_rede_social';
 
     public function estabelecimento()
     {

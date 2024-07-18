@@ -10,6 +10,7 @@ class TelefoneEstabelecimento extends Model
     use HasFactory;
 
     protected $table = 'telefone_estabelecimento';
+    protected $primaryKey = 'id_tel_estabelecimento';
 
     public function estabelecimento()
     {

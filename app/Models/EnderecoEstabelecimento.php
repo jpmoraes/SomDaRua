@@ -10,6 +10,7 @@ class EnderecoEstabelecimento extends Model
     use HasFactory;
 
     protected $table = 'endereco_estabelecimento';
+    protected $primaryKey = 'id_end_estabelecimento';
 
     public function estabelecimento()
     {

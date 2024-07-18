@@ -5,8 +5,7 @@
         <div class="topoPage">
             <h1>ESTABELECIMENTOS</h1>
             <div class="col text-end" class="adicionar">
-                <button class="btn btn-dark"> <a class="dropdown-item" href="/admin/estabelecimento/create"> +
-                    </a></button>
+                <button class="btn btn-dark" onclick="window.location='{{route('estabelecimento.create')}}'"> + </button>
             </div>
         </div>
 
@@ -23,20 +22,19 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($showEstabelecimento as $data)
+                @foreach($estabelecimentoArray as $estabelecimento)
                     <tr>
-                        <th scope="row">{{$data->id}}</th>
-                        <td>{{$data->nome}}</td>
-                        <td>{{$data->Endereço}}</td>
-                        <td>{{$data->rede_social}}</td>
-                        <td>{{$data->URL}}</td>
+                        <th scope="row">{{$estabelecimento['id_estabelecimento']}}</th>
+                        <td>{{$estabelecimento['nome']}}</td>
+                        <td>{{$estabelecimento['endereco']}}</td>
+                        <td>{{$estabelecimento['tipo']}}</td>
+                        <td>{{$estabelecimento['url']}}</td>
                         <td>
-                            <form id="deleteForm{{$data->id}}"
-                                action="{{ route('adminEstabelecimento.delete', ['id' => $data->id]) }}" method="POST">
+                            <form action="{{route('estabelecimento.delete', $estabelecimento['id_estabelecimento'])}}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-default btn-lg" data-bs-toggle="modal"
-                                    data-bs-target="#deleteModal{{$data->id}}">
+                                        data-bs-target="#deleteModal{{$estabelecimento['id_estabelecimento']}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-trash" viewBox="0 0 16 16">
                                         <path
@@ -49,7 +47,7 @@
                         </td>
                         <td>
                             <button type="button" class="btn btn-default btn-lg" data-bs-toggle="modal"
-                                data-bs-target="#myModal{{$data->id}}">
+                                data-bs-target="#myModal{{$estabelecimento['id_estabelecimento']}}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-arrow-repeat" viewBox="0 0 16 16">
                                     <path
@@ -59,32 +57,74 @@
                         </td>
                     </tr>
 
-                    <div class="modal fade" id="myModal{{$data->id}}" tabindex="-1"
-                        aria-labelledby="exampleModalLabel{{$data->id}}" aria-hidden="true">
+                    <div class="modal fade" id="myModal{{$estabelecimento['id_estabelecimento']}}" tabindex="-1"
+                        aria-labelledby="exampleModalLabel{{$estabelecimento['id_estabelecimento']}}" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel{{$data->id}}">Atualizar Nome</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel{{$estabelecimento['id_estabelecimento']}}">Atualizar Nome</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Fechar"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="{{ route('adminEstabelecimento.update', ['id' => $data->id]) }}"
+                                    <form action="{{ route('estabelecimento.update', $estabelecimento['id_estabelecimento']) }}"
                                         method="POST">
                                         @csrf
                                         @method('PUT')
-                                        <div class="form-group">
-                                            <label for="novo_nome{{$data->id}}">Novo Nome:</label>
-                                            <input type="text" class="form-control" id="novo_nome{{$data->id}}"
-                                                name="novo_nome" value="{{$data->nome}}">
-                                        </div>
-                                        <br>
+                                            <div class="mb-3">
+                                                <label for="formGroupExampleInput" class="form-label">Nome do estabelecimento</label>
+                                                <input type="text" name="nome" class="form-control" id="formGroupExampleInput">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="formGroupExampleInput" class="form-label">CPF/CNPJ</label>
+                                                <input type="text" name="cpf_cnpj" class="form-control" id="formGroupExampleInput">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="formGroupExampleInput" class="form-label">Rua</label>
+                                                <input type="text" name="rua" class="form-control" id="formGroupExampleInput">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="formGroupExampleInput" class="form-label">Bairro</label>
+                                                <input type="text" name="bairro" class="form-control" id="formGroupExampleInput">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="formGroupExampleInput" class="form-label">Complemento</label>
+                                                <input type="text" name="complemento" class="form-control" id="formGroupExampleInput">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="formGroupExampleInput" class="form-label">CEP</label>
+                                                <input type="text" name="cep" class="form-control" id="formGroupExampleInput">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="formGroupExampleInput" class="form-label">Número</label>
+                                                <input type="text" name="numero" class="form-control" id="formGroupExampleInput">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="formGroupExampleInput" class="form-label">Telefone</label>
+                                                <input type="text" name="telefone" class="form-control" id="formGroupExampleInput">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="formGroupExampleInput" class="form-label">URL</label>
+                                                <input type="text" name="url" class="form-control" id="formGroupExampleInput">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="formGroupExampleInput" class="form-label">Tipo de redes</label>
+                                                <select name= "tipoRede" class="form-select form-select-lg mb-3" aria-label="Large select example">
+                                                    <option value="1">Instagram</option>
+                                                    <option value="2">Site</option>
+                                                    <option value="3">Facebook</option>
+                                                    <option value="4">Twitter</option>
+                                                </select>
+                                            </div>
+
                                         <button type="submit" class="btn btn-primary">Atualizar</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
                 @endforeach
             </tbody>
         </table>
