@@ -19,6 +19,7 @@
                     <th scope="col">Rede Social</th>
                     <th scope="col">URL</th>
                     <th scope="col"></th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +28,7 @@
                         <th scope="row">{{$estabelecimento['id_estabelecimento']}}</th>
                         <td>{{$estabelecimento['nome']}}</td>
                         <td>{{$estabelecimento['endereco']}}</td>
+                        <td>{{$estabelecimento['telefone']}}</td>
                         <td>{{$estabelecimento['tipo']}}</td>
                         <td>{{$estabelecimento['url']}}</td>
                         <td>

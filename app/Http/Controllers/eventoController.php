@@ -88,7 +88,8 @@ class eventoController extends Controller
     }
 
     public function getQrcode($id){
-        $link = Avaliacao::find($id)['link_avaliacao'];
+        $link = Avaliacao::where('evento_id', $id)->get('link_avaliacao')[0]['link_avaliacao'];
+        $link = json_decode(json_encode($link), true);
 
         $qrcode = ['qrcode' => Qrcode::size(120)->generate($link),
                     'link' => $link];
