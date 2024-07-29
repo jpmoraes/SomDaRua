@@ -1,0 +1,525 @@
+// INICIO DO CSS DO FORM
+
+.container2 {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: rgb(42 44 46 / 64%);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group input[type="text"],
+.form-group input[type="datetime-local"],
+.form-group select,
+textarea{
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.radio-group {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.radio-group label {
+    margin-left: 10px;
+}
+
+.radio-group input {
+    margin-right: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.socialMedia {
+    margin-top: 10px;
+}
+
+#eventImageButton {
+    width: 100%;
+    max-width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #ccc;
+    cursor: pointer;
+}
+
+#eventImageButton img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+button[type="submit"] {
+    background-color: #f2a007;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+button[type="submit"]:hover {
+    background-color: #f2a007;
+}
+
+.modal-content {
+    background-color: #cccccc00;
+    border: none;
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.modal-dialog-scrollable .modal-bodyt::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+    border: 3px solid transparent;
+}
+
+/* Breakpoints */
+@media (max-width: 1200px) {
+    .container2 {
+        width: 80%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container2 {
+        width: 85%;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container2 {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container2 {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+
+    #eventImageButton {
+        width: 100%;
+    }
+
+    #eventImageButton img {
+        width: 100%;
+        height: auto;
+    }
+}
+.datetime-container {
+    display: flex;
+    gap: 15px;
+}
+
+.datetime-container input[type="date"],
+.datetime-container input[type="time"] {
+    flex: 1;
+}
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+}
+.form-control {
+    flex: 1;
+    margin-right: 5px;
+}
+#eventName,
+#eventDate,
+#eventTime,
+#eventLocation,
+#radio-group {
+    display: block !important;
+}
+.socialMedia {
+    margin-top: 10px;
+}
+.caixa {
+    display: flex !important;
+    margin: 0 10px;
+    justify-content: space-between;
+}
+// FINAL DO CSS DO FORM
+
+// INICIO DO HEADER
+.header2 {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: whitesmoke;
+    background-color: #f2a007;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+.img_topo img {
+    max-height: 50px;
+    margin-top: 10px;
+}
+
+.menu-hamburger {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-hamburguer-elements {
+    display: flex;
+    width: 80%;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-hamburguer-elements li {
+    list-style: none;
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    list-style: none;
+}
+
+.menu-hamburguer-elements a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-hamburguer-elements a:hover {
+    color: rgba(20, 20, 20, 0.8);
+}
+
+/* BOTÃO MENU HAMBURGUER */
+.menu {
+    background-color: #055ba6;
+    width: 60px;
+    height: 60px;
+    margin: 1rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburguer {
+    position: relative;
+    display: block;
+    background: #fff;
+    width: 30px;
+    height: 2px;
+    top: 29px;
+    left: 15px;
+    transition: 0.5s ease-in-out;
+}
+
+.hamburguer:before,
+.hamburguer:after {
+    background: #ffff;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+}
+
+.hamburguer:before {
+    top: -10px;
+}
+
+.hamburguer:after {
+    bottom: -10px;
+}
+
+input {
+    display: none;
+}
+
+/* rotação dos elementos do span */
+input:checked ~ label .hamburguer {
+    transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburguer:before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+input:checked ~ label .hamburguer:after {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+input:checked ~ .menu-hamburguer-elements {
+    left: 0;
+}
+
+/* ATIVANDO O BOTÃO HAMBURGUER QUANDO O TAMANHO DA TELA ATINGIR 600PX */
+@media (max-width: 600px) {
+    header {
+        height: 20%;
+    }
+
+    .menu-hamburguer-elements a:hover {
+        color: rgb(35, 35, 35);
+    }
+
+    .menu-hamburger {
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        align-self: flex-start;
+        overflow: auto;
+        z-index: 1;
+        color: white;
+    }
+
+    .menu-hamburguer-elements {
+        width: 60%;
+        height: 100%;
+        background-color: #f2a007d0;
+        position: fixed;
+        left: -60%;
+        top: 0;
+
+        transition: left cubic-bezier(1, 0, 0, 1) 0.8s;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        padding-top: 15vh;
+
+        z-index: -1;
+    }
+
+    .menu {
+        display: flex;
+        height: 60px;
+        width: 60px;
+    }
+}
+//FINAL DO HEADER
+
+//INICIO DO PAGE ADMIN
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #055ba6;
+    color: #fff;
+}
+
+.butaoform {
+    background-color: #f2a007;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.row-cols-1 {
+    flex-wrap: wrap;
+    margin-top: -10px;
+}
+
+.card {
+    background-color: #0c015622 !important;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.custom-btn {
+    background-color: #055ba6;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #3487d3;
+}
+
+.custom-btn:active {
+    background-color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+//CADASTRO DO USUARIO
+
+* {
+    justify-content: center;
+}
+
+.input-group2 {
+    row-gap: 50px;
+    text-align: center;
+}
+
+.usuario {
+    width: 300px;
+    height: 40px;
+}
+
+.input-group2 input {
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.btnpronto {
+    align-items: center;
+    justify-content: center;
+}
+.form-containe input {
+    row-gap: 20px;
+    gap: 20px;
+}
+
+.botaodiv {
+    display: flex;
+}
+// CSS FORMULÁRIO USUARIO
+
+//CSS cardEvento.blade.php
+#icardEvento,
+#icardli {
+    background-color: #0c015622 !important;
+}
+
+#icardTitle {
+    display: flex;
+    font-family: "Thunderhouse Pro";
+    font-size: 35px;
+    justify-content: center;
+    color: white;
+}
+
+#icardli {
+    display: flex;
+    font-family: "Thunderhouse Pro";
+    font-size: 25px;
+    color: white;
+}
+.cardsOrg{
+display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px
+}
+//
+
+#nome {
+    float: right;
+}
+
+/*============PAGINA SHOW ESTABELECIMENTO======*/
+
+.topoPage {
+    display: flex;
+    flex-direction: row;
+}
+
+.topoPage button {
+    font-size: 20px;
+}
+
+.table th,td{
+    background-color: #ffffff51 !important;
+}
+
+.position-absolute{
+    display: flex;
+}

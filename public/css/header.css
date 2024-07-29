@@ -1,0 +1,243 @@
+@import url(https://db.onlinewebfonts.com/c/e8fafd4bab1ff229bb62067775369b8d?family=Thunderhouse+Pro);
+/* ===== Estrutura principal do site ===== */
+body {
+  /* background: linear-gradient(#F2A007,#df9407,#d38b06); */
+  /* background-image: linear-gradient(180deg, rgb(48, 16, 193), rgb(0, 0, 0),  rgb(0, 0, 0)); */
+  background-color: black !important;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* html, body{
+    background: rgb(228, 228, 228);
+    overscroll-behavior: none;
+} */
+/* ===== Estrutura principal do site ===== */
+.headerSom {
+  margin-top: 20px;
+  grid-area: headerSom;
+  background: rgba(5, 91, 166, 0);
+  font-family: "Thunderhouse Pro";
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 0px;
+}
+
+@media (max-width: 991px) {
+  .headerSom {
+    height: 90px;
+  }
+}
+.bg-body-tertiary {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 30px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.nav-link:hover {
+  color: #F2B807;
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 2px;
+    background-color: #F2B807;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-link:hover::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+.logoHeader {
+  width: 6vW;
+  min-width: 80px;
+  margin-right: 140px;
+  margin-top: 4px;
+  margin-left: 10px;
+}
+
+@media (max-width: 1175px) {
+  .logoHeader {
+    width: 6vW;
+    min-width: 80px;
+    margin-right: 0px;
+    margin-top: 4px;
+    margin-left: 10px;
+  }
+  .offcanvas-header, .offcanvas-body {
+    background-color: rgb(27, 27, 27);
+  }
+}
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+  color: #c86161;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.login-button {
+  grid-area: login-button;
+  background-color: #D96248;
+  color: #fff;
+  font-size: 30px;
+  padding: 0px 20px 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+  margin-left: 100px;
+}
+
+@media (max-width: 1188px) {
+  .login-button {
+    margin-left: 0px;
+  }
+}
+.login-button:hover {
+  background-color: #F2B807;
+}
+
+.logoHeader-offcanva {
+  width: 150px;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  align-content: center;
+}
+
+.navbar-toggler, .navbar-toggler-icon {
+  color: #fff !important;
+}
+
+/* .gridheader{
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-areas: 
+    "logoHeader" "headertextomenu" "login-button";
+}
+
+.headertextomenu{
+    grid-area: headertextomenu;
+} */
+/*===========BACKGROUND DO SITE =========*/
+.glassy-overlay {
+  background: linear-gradient(180deg, black, black, rgb(41, 120, 239));
+}
+
+#up {
+  position: absolute;
+  background-image: linear-gradient(80deg, rgb(5, 124, 172), rgba(43, 247, 202, 0.5));
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: down 20s infinite;
+  z-index: -1000;
+}
+
+#down {
+  position: absolute;
+  right: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, rgba(245, 207, 82, 0.8), rgb(199, 10, 114));
+  filter: blur(80px);
+  animation: up 20s infinite;
+  z-index: -1000;
+}
+
+#left {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  top: 0;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, rgb(5, 124, 172), rgba(183, 253, 52, 0.8));
+  filter: blur(80px);
+  animation: left 20s infinite;
+  z-index: -1000;
+}
+
+#rigth {
+  position: absolute;
+  height: 500px;
+  top: 0;
+  width: 700px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, rgba(26, 248, 18, 0.6), rgba(199, 10, 114, 0.5));
+  filter: blur(80px);
+  animation: right 20s infinite;
+  z-index: -1000;
+}
+
+@keyframes down {
+  0%, 100% {
+    bottom: 100px;
+  }
+  70% {
+    bottom: -2500px;
+  }
+}
+@keyframes up {
+  0%, 100% {
+    top: -1%;
+  }
+  70% {
+    top: 70%;
+  }
+}
+@keyframes left {
+  0%, 100% {
+    left: -100px;
+  }
+  70% {
+    left: 500px;
+  }
+}
+@keyframes rigth {
+  0%, 100% {
+    rigth: -100px;
+  }
+  70% {
+    rigth: 1300px;
+  }
+}
+#middle {
+  position: absolute;
+  height: 700px;
+  top: 1150px;
+  width: 700px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, rgba(255, 213, 5, 0.6), rgba(199, 10, 10, 0.5));
+  filter: blur(80px);
+  animation: middle 10s infinite;
+  z-index: -1000;
+}
+
+@keyframes middle {
+  0%, 100% {
+    left: -100px;
+  }
+  70% {
+    left: 500px;
+  }
+}
