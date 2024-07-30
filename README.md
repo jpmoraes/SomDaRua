@@ -19,6 +19,7 @@ Esse projeto precisa de alguns softwares para rodar localmente
 ## Instalação
 Após clonar o projeto, deve-se iniciar o banco de dados MySQL e criar um arquivo .env baseado no .env.example, e após isso, rodar os seguintes comandos na raiz do projeto:
 ```
+composer install
 npm install
 php artisan migrate:fresh
 php artisan db:seed
